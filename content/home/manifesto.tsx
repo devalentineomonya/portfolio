@@ -25,7 +25,7 @@ export const Manifesto = () => (
       ))}
     </h2>
     <span
-      className="hand absolute z-20 text-violet text-[18vw] md:text-[10vw] left-[18%] top-[55%] -rotate-12 select-none"
+      className="hand absolute z-20 text-violet text-[18vw] md:text-[10vw] left-[18%] top-[68%] -rotate-12 select-none"
       id="handWord"
     >
       for real

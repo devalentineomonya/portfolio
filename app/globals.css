@@ -125,14 +125,16 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    gap: 0.18em 0.28em;
+    /* em gaps resolve against this size, so they scale with the words */
+    font-size: clamp(2.4rem, 7.8vw, 7.4rem);
+    gap: 0.14em 0.3em;
     text-align: center;
   }
   .manifesto-word {
     display: inline-block;
     will-change: transform, opacity;
     font-family: var(--font-anton), "Anton", sans-serif;
-    font-size: clamp(2.4rem, 7.8vw, 7.4rem);
+    font-size: 1em;
     line-height: 0.9;
     letter-spacing: -0.045em;
     text-transform: uppercase;
