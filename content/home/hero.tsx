@@ -103,7 +103,10 @@ export const Hero = () => {
         className="absolute inset-0 flex items-center justify-center z-10"
         style={{ perspective: "1400px" }}
       >
-        <div className="relative w-full max-w-5xl h-[62vh] flex items-center justify-center">
+        <div
+          id="heroCards"
+          className="relative w-full max-w-5xl h-[62vh] flex items-center justify-center"
+        >
           <HeroCard
             id="card1"
             className="absolute w-40 sm:w-48 md:w-56 will-change-transform"
@@ -152,16 +155,41 @@ export const Hero = () => {
         className="absolute bottom-0 left-0 right-0 border-t border-white/40 z-20"
         id="heroCopy"
       >
-        <div className="px-5 md:px-8 py-5 flex items-end justify-between text-white">
-          <p className="text-base md:text-lg font-medium leading-snug max-w-sm">
-            {heroContent.copy}
-          </p>
+        <div className="px-5 md:px-8 pt-5 pb-[5.5rem] md:pb-5 flex items-end justify-between gap-6 text-white">
+          <div className="max-w-[15rem] sm:max-w-md">
+            <p className="text-base md:text-lg font-medium leading-snug">
+              {heroContent.copy}
+            </p>
+            <p className="mt-2 hidden text-sm text-white/80 sm:block">
+              {heroContent.status}
+            </p>
+          </div>
           <ArrowDownIcon
-            className="w-5 h-5 mb-1 animate-bounce"
+            className="hidden md:block w-5 h-5 mb-1 animate-bounce"
             strokeWidth={1.5}
           />
         </div>
       </div>
+      <aside
+        id="heroAbout"
+        aria-label="What I do"
+        className="absolute left-5 right-5 top-24 md:left-auto md:right-8 md:w-64 z-20 text-white"
+      >
+        <p className="text-xs font-semibold uppercase tracking-[0.18em] text-white/70">
+          What I do
+        </p>
+        <ul className="mt-3">
+          {heroContent.services.map((service, index) => (
+            <li
+              key={service}
+              className="flex gap-3 border-t border-white/30 py-2 text-sm md:text-base font-medium leading-snug"
+            >
+              <span className="pt-0.5 text-xs text-white/60">0{index + 1}</span>
+              {service}
+            </li>
+          ))}
+        </ul>
+      </aside>
     </section>
   );
 };

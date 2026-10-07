@@ -393,6 +393,27 @@
       min-height: 100svh;
     }
   }
+  /* Short phone screens: shrink the hero cards and trim the list so nothing collides. */
+  @media (max-width: 767px) and (max-height: 700px) {
+    #card1,
+    #card2,
+    #card3 {
+      zoom: 0.72;
+    }
+    #heroAbout li:nth-child(3) {
+      display: none !important;
+    }
+    #heroCards {
+      translate: 0 -2vh;
+    }
+  }
+  @media (max-width: 767px) and (max-height: 600px) {
+    #card1,
+    #card2,
+    #card3 {
+      zoom: 0.6;
+    }
+  }
   @media (min-width: 768px) {
     .poster-section {
       min-height: auto !important;

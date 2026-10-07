@@ -64,9 +64,10 @@ export const HomeMotion = () => {
 
     const ctx = gsap.context(() => {
       /* ---------- 0 · on load intro ---------- */
-      gsap.set(["#siteNav", "#createcta", "#heroWord", "#heroCopy"], {
-        autoAlpha: 0,
-      });
+      gsap.set(
+        ["#siteNav", "#createcta", "#heroWord", "#heroCopy", "#heroAbout"],
+        { autoAlpha: 0 },
+      );
       gsap.set(["#card1", "#card2", "#card3"], { autoAlpha: 0 });
       gsap.set(".loader-letter", { yPercent: 115, autoAlpha: 0 });
       gsap.set([".loader-tag", ".loader-meta"], { y: 14, autoAlpha: 0 });
@@ -172,6 +173,12 @@ export const HomeMotion = () => {
           { y: 30, autoAlpha: 0 },
           { y: 0, autoAlpha: 1, duration: 0.62, ease: "power2.out" },
           2.38,
+        )
+        .fromTo(
+          "#heroAbout",
+          { y: -24, autoAlpha: 0 },
+          { y: 0, autoAlpha: 1, duration: 0.62, ease: "power2.out" },
+          2.46,
         );
 
       /* ---------- 1 · hero pinned ---------- */
@@ -189,7 +196,8 @@ export const HomeMotion = () => {
         .to("#card3", { x: "16vw", y: "-5vh", rotate: 16, ease: "none" }, 0)
         .to("#card2", { y: "-9vh", rotate: 4, scale: 1.05, ease: "none" }, 0)
         .to("#heroWord", { scale: 1.12, y: "-6vh", ease: "none" }, 0)
-        .to("#heroCopy", { autoAlpha: 0, y: 40, ease: "none" }, 0.3);
+        .to("#heroCopy", { autoAlpha: 0, y: 40, ease: "none" }, 0.3)
+        .to("#heroAbout", { autoAlpha: 0, y: -40, ease: "none" }, 0.3);
 
       /* ---------- 2 · interlude ---------- */
       const interludeTimeline = gsap.timeline({
@@ -199,13 +207,22 @@ export const HomeMotion = () => {
           end: "+=130%",
           scrub: 1,
           pin: true,
+          invalidateOnRefresh: true,
         },
       });
       interludeTimeline
         .fromTo(
           "#skillsWord",
           { x: "24vw", rotate: 5 },
-          { x: "-58vw", rotate: -3, ease: "none" },
+          {
+            // Travel far enough that the whole phrase ends inside the viewport.
+            x: () => {
+              const word = document.querySelector<HTMLElement>("#skillsWord");
+              return word ? window.innerWidth * 0.94 - word.offsetWidth : 0;
+            },
+            rotate: -3,
+            ease: "none",
+          },
           0,
         )
         .fromTo(
