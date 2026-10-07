@@ -70,8 +70,8 @@ export const Join = () => (
       })}
       <div className="absolute right-5 md:right-[8vw] top-[23%] md:top-[31%] max-w-xs text-black z-20">
         <p className="text-lg md:text-xl font-semibold leading-snug">
-          Building something? Tell me what it is, who it&apos;s for and when you
-          need it. I&apos;ll tell you honestly if I&apos;m the right fit.
+          Hiring, or building a team? Tell me about the role and I&apos;ll get
+          back to you.
         </p>
         <a
           className="mt-4 inline-block text-sm font-semibold underline underline-offset-4 hover:opacity-60 transition-opacity"
@@ -80,14 +80,33 @@ export const Join = () => (
           {heroContent.links.emailAddress}
         </a>
         <p className="mt-3 text-sm">
-          Hiring?{" "}
           <a
             className="font-semibold underline underline-offset-4 hover:opacity-60 transition-opacity"
             href={heroContent.links.resume}
             target="_blank"
             rel="noopener noreferrer"
           >
-            Here&apos;s my résumé.
+            Résumé
+          </a>
+          {" · "}
+          <a
+            className="font-semibold underline underline-offset-4 hover:opacity-60 transition-opacity"
+            href={heroContent.links.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn
+          </a>
+        </p>
+        <p className="mt-3 text-sm text-black/70">
+          Need a website for your business?{" "}
+          <a
+            className="font-semibold text-black underline underline-offset-4 hover:opacity-60 transition-opacity"
+            href={heroContent.links.studio}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Devaltech builds them →
           </a>
         </p>
         <svg

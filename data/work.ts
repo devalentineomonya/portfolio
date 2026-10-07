@@ -32,10 +32,10 @@ export const workProjects: WorkProject[] = [
     title: "Studio",
     category: "Brand",
     description:
-      "My own studio website, where I show client work, case studies and the services I offer.",
+      "Devaltech, my web studio for businesses. Client work, case studies and prices live here.",
     image: "/work/studio-desktop.webp",
     mobileImage: "/work/studio-mobile.webp",
-    url: "https://studio.devalentine.com",
+    url: "https://www.devaltech.co.ke",
     technologies: ["next.js", "react"],
   },
   {

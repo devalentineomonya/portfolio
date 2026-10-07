@@ -71,6 +71,14 @@ export const SiteFooter = () => (
         <Link className="hover:opacity-60 transition-opacity" href="/stories">
           Stories
         </Link>
+        <a
+          className="hover:opacity-60 transition-opacity"
+          href={heroContent.links.studio}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Devaltech (client work)
+        </a>
       </div>
       <div className="grid grid-cols-2 content-start gap-x-6 gap-y-1.5 text-sm md:max-w-xs">
         {socialLinks
