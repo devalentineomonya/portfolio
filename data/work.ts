@@ -135,3 +135,12 @@ export const workProjects: WorkProject[] = [
     archived: true,
   },
 ];
+
+export const getProject = (title: string): WorkProject => {
+  const project = workProjects.find((p) => p.title === title);
+  if (!project) throw new Error(`Unknown project: ${title}`);
+  return project;
+};
+
+export const getHost = (url: string) =>
+  new URL(url).hostname.replace(/^www\./, "");

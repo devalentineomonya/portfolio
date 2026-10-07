@@ -1,17 +1,17 @@
 export const heroContent = {
-  subtitle: "// just a simple guy building stuff",
-  title: "turns ideas into functionable systems.",
-  description:
-    "A Software Engineer with expertise in frontend, backend, and DevOps. I specialize in building robust and scalable software that solves real-world problems.",
+  brand: "devalentine.",
+  tagline: "Software engineer · Nairobi",
+  word: "VALENTINE",
+  copy: "Frontend, backend and DevOps. Built into systems people actually use.",
   profile: {
     name: "Valentine Omonya",
+    role: "Software Engineer",
     location: "Nairobi",
     image: "/avatar.webp",
-    roles: "Software Engineer, Frontend, Backend, DevOps, AI.",
   },
   links: {
     email: "mailto:contact@devalentine.com",
-    work: "#work",
-    stories: "#stories",
+    emailAddress: "contact@devalentine.com",
+    github: "https://github.com/devalentineomonya",
   },
 };

@@ -1,23 +1,47 @@
 export const navLinks = [
-  { id: "home", label: "Home" },
-  { id: "work", label: "Work" },
-  { id: "experience", label: "Experience" },
-  { id: "stories", label: "Stories" },
-  { id: "contact", label: "Contact" },
+  { label: "About", href: "/#interlude" },
+  { label: "Featured", href: "/#product" },
+  { label: "Work", href: "/#archive" },
+  { label: "Experience", href: "/#builder" },
+  { label: "Notes", href: "/#board" },
+  { label: "Contact", href: "/#join" },
 ];
 
-export const socialLinks = [
-  { label: "GitHub", href: "https://github.com/devalentineomonya", colSpan: 1 },
+export type SocialId =
+  | "github"
+  | "linkedin"
+  | "x"
+  | "instagram"
+  | "tiktok"
+  | "youtube"
+  | "email";
+
+export const socialLinks: { id: SocialId; label: string; href: string }[] = [
   {
+    id: "github",
+    label: "GitHub",
+    href: "https://github.com/devalentineomonya",
+  },
+  {
+    id: "linkedin",
     label: "LinkedIn",
     href: "https://linkedin.com/in/devalentineomonya",
-    colSpan: 1,
   },
-  { label: "Twitter", href: "https://x.com/devalentine_", colSpan: 1 },
-  { label: "Email", href: "mailto:contact@devalentine.com", colSpan: 1 },
+  { id: "x", label: "X (Twitter)", href: "https://x.com/devalentine_" },
   {
-    label: "Builder at companyX",
-    href: "https://studio.devalentine.com",
-    colSpan: 2,
+    id: "instagram",
+    label: "Instagram",
+    href: "https://www.instagram.com/valentine_in_tech/",
   },
+  {
+    id: "tiktok",
+    label: "TikTok",
+    href: "https://www.tiktok.com/@devalentine",
+  },
+  {
+    id: "youtube",
+    label: "YouTube",
+    href: "https://www.youtube.com/@valentine_in_tech",
+  },
+  { id: "email", label: "Email", href: "mailto:contact@devalentine.com" },
 ];
