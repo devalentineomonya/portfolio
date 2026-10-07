@@ -1,5 +1,5 @@
-import Link from "next/link";
 import { experiences } from "@/data/experience";
+import { heroContent } from "@/data/hero";
 import { ArrowUpRightIcon, ScanFaceIcon } from "@/components/ui/icons";
 
 const byCompany = (company: string) => {
@@ -101,13 +101,15 @@ export const Builder = () => {
             data-number="05"
           >
             <span className="text-sm font-semibold"> Full résumé </span>
-            <Link
-              href="/experience"
+            <a
+              href={heroContent.links.resume}
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center gap-2 text-xs border border-white/25 px-3 py-2 rounded-md hover:bg-white hover:text-black transition-colors"
             >
               Open
               <ArrowUpRightIcon className="w-3.5 h-3.5" />
-            </Link>
+            </a>
           </div>
         </article>
       </div>

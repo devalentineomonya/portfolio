@@ -13,5 +13,6 @@ export const heroContent = {
     email: "mailto:contact@devalentine.com",
     emailAddress: "contact@devalentine.com",
     github: "https://github.com/devalentineomonya",
+    resume: "https://v1.devalentine.com/resume.pdf",
   },
 };

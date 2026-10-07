@@ -2,7 +2,7 @@ import Image from "next/image";
 import type { CSSProperties, ReactNode } from "react";
 import { heroContent } from "@/data/hero";
 import { getProject } from "@/data/work";
-import { ArrowDownIcon, CircleCheckIcon, CodeIcon } from "@/components/ui/icons";
+import { ArrowDownIcon, CodeIcon, FileTextIcon } from "@/components/ui/icons";
 
 interface HeroCardProps {
   id: string;
@@ -17,6 +17,7 @@ interface HeroCardProps {
   action: { label: string; href: string; external?: boolean };
   rowIcon: ReactNode;
   rowText: string;
+  rowHref?: string;
 }
 
 const HeroCard = ({
@@ -32,6 +33,7 @@ const HeroCard = ({
   action,
   rowIcon,
   rowText,
+  rowHref,
 }: HeroCardProps) => (
   <article id={id} className={className} style={style}>
     <div
@@ -60,10 +62,22 @@ const HeroCard = ({
       >
         {action.label}
       </a>
-      <div className="mt-2 flex items-center justify-center gap-1.5 border border-white/30 rounded-md py-1.5">
-        {rowIcon}
-        <span className="text-xs">{rowText}</span>
-      </div>
+      {rowHref ? (
+        <a
+          className="mt-2 flex items-center justify-center gap-1.5 border border-white/30 rounded-md py-1.5 hover:bg-white/10 transition-colors"
+          href={rowHref}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {rowIcon}
+          <span className="text-xs">{rowText}</span>
+        </a>
+      ) : (
+        <div className="mt-2 flex items-center justify-center gap-1.5 border border-white/30 rounded-md py-1.5">
+          {rowIcon}
+          <span className="text-xs">{rowText}</span>
+        </div>
+      )}
     </div>
   </article>
 );
@@ -114,10 +128,9 @@ export const Hero = () => {
             image={heroContent.profile.image}
             imageAlt={heroContent.profile.name}
             action={{ label: "Say hello", href: heroContent.links.email }}
-            rowIcon={
-              <CircleCheckIcon className="w-3.5 h-3.5" strokeWidth={1.5} />
-            }
-            rowText="Open for roles"
+            rowIcon={<FileTextIcon className="w-3.5 h-3.5" strokeWidth={1.5} />}
+            rowText="Full résumé"
+            rowHref={heroContent.links.resume}
           />
           <HeroCard
             id="card3"
