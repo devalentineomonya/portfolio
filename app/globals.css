@@ -126,7 +126,7 @@
     align-items: center;
     justify-content: center;
     /* em gaps resolve against this size, so they scale with the words */
-    font-size: clamp(2.4rem, 7.8vw, 7.4rem);
+    font-size: clamp(1.7rem, 4.6vw, 4.6rem);
     gap: 0.14em 0.3em;
     text-align: center;
   }

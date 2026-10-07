@@ -1,15 +1,6 @@
-const words = [
-  "Honest,",
-  "simple",
-  "software",
-  "that",
-  "solves",
-  "real",
-  "problems",
-  "for",
-  "everyday",
-  "people.",
-];
+import { heroContent } from "@/data/hero";
+
+const words = heroContent.story.split(" ");
 
 export const Manifesto = () => (
   <section
@@ -18,8 +9,8 @@ export const Manifesto = () => (
   >
     <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(109,39,218,0.22),transparent_32%),radial-gradient(circle_at_80%_72%,rgba(245,166,35,0.26),transparent_30%)]"></div>
     <h2 className="relative z-10 manifesto-sentence text-black">
-      {words.map((word) => (
-        <span className="manifesto-word" key={word}>
+      {words.map((word, index) => (
+        <span className="manifesto-word" key={`${word}-${index}`}>
           {word}
         </span>
       ))}
@@ -36,6 +27,6 @@ export const Manifesto = () => (
     >
       WEBSITES APPS SHOPS CLINICS SCHOOLS STARTUPS TEAMS IDEAS
     </div>
-    <p className="section-label text-black/60">04 / What I believe</p>
+    <p className="section-label text-black/60">04 / A little about me</p>
   </section>
 );

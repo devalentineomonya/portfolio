@@ -286,10 +286,10 @@ export const HomeMotion = () => {
       ];
 
       gsap.set(".manifesto-word", {
-        x: (i: number) => messyStarts[i].x,
-        y: (i: number) => messyStarts[i].y,
-        rotate: (i: number) => messyStarts[i].rotate,
-        scale: (i: number) => messyStarts[i].scale,
+        x: (i: number) => messyStarts[i % messyStarts.length].x,
+        y: (i: number) => messyStarts[i % messyStarts.length].y,
+        rotate: (i: number) => messyStarts[i % messyStarts.length].rotate,
+        scale: (i: number) => messyStarts[i % messyStarts.length].scale,
       });
 
       const manifestoTimeline = gsap.timeline({
@@ -311,7 +311,7 @@ export const HomeMotion = () => {
           "#handWord",
           { autoAlpha: 0, x: "-20vw", rotate: -30, scale: 0.5 },
           { autoAlpha: 1, x: 0, rotate: -12, scale: 1, ease: "none" },
-          0.55,
+          0.9,
         );
 
       /* ---------- 5 · archive grid ---------- */
