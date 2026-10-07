@@ -33,8 +33,7 @@ export const workProjects: WorkProject[] = [
     category: "Brand",
     description:
       "A dedicated brand website meticulously crafted to showcase my premium client work, technical case studies, and professional services.",
-    image:
-      "https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=800&auto=format&fit=crop",
+    image: "/work/studio-desktop.webp",
     mobileImage: "/work/studio-mobile.webp",
     url: "https://studio.devalentine.com",
     technologies: ["next.js", "react"],
