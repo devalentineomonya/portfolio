@@ -18,7 +18,7 @@ const archived = workProjects.filter((p) => p.archived).slice(0, 3);
 
 const cards: BoardCard[] = [
   ...stories.map((story) => ({
-    label: `Story · ${story.category}`,
+    label: `Read · ${story.category}`,
     title: story.title,
     meta: (
       <>
@@ -31,12 +31,10 @@ const cards: BoardCard[] = [
     external: story.url.startsWith("http"),
   })),
   ...archived.map((project, index) => ({
-    label: "Archive",
+    label: "Older project",
     title: project.title,
     meta: (
       <>
-        {project.category}
-        <br />
         {getHost(project.url)}
       </>
     ),
@@ -46,17 +44,17 @@ const cards: BoardCard[] = [
     className: index === 1 ? "lg:col-start-2" : undefined,
   })),
   {
-    label: "Stories",
+    label: "Writing",
     title: (
       <>
-        Read every
+        Read all
         <br />
-        story
+        my stories
       </>
     ),
     meta: (
       <>
-        All posts
+        Every post
         <br />
         /stories
       </>

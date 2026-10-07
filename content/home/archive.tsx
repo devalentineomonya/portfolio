@@ -68,10 +68,10 @@ export const Archive = () => (
     <div className="absolute bottom-0 left-0 right-0 border-t border-white/25 z-10">
       <div className="px-5 md:px-8 py-5 flex items-end justify-between text-white">
         <p className="text-base font-semibold max-w-sm leading-snug">
-          From one focused build to a full archive of work.
+          A few of the things I&apos;ve built over the years.
         </p>
         <p className="text-xs text-white/55 hidden sm:block">
-          3 × 5 living gallery
+          15 screens from 8 projects
         </p>
       </div>
     </div>

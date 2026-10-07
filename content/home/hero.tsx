@@ -110,12 +110,12 @@ export const Hero = () => {
             style={{ transform: "rotateY(22deg) rotateZ(-8deg)" }}
             titleClass="text-base"
             title={["Nine", "Hertz"]}
-            subtitle="AI healthcare · Personal"
+            subtitle="Healthcare app for clinics"
             image={nineHertz.mobileImage ?? ""}
             imageAlt="Nine Hertz mobile screen"
-            action={{ label: "View project", href: nineHertz.url, external: true }}
+            action={{ label: "See it live", href: nineHertz.url, external: true }}
             rowIcon={<CodeIcon className="w-3.5 h-3.5" strokeWidth={1.5} />}
-            rowText="react · nestjs · docker"
+            rowText="React + NestJS"
           />
           <HeroCard
             id="card2"
@@ -139,12 +139,12 @@ export const Hero = () => {
             shadow="shadow-[-30px_40px_60px_rgba(0,0,0,0.45)]"
             titleClass="text-base"
             title={["Journaling", "App"]}
-            subtitle="Mobile · M-Pesa finance"
+            subtitle="Tracks your M-Pesa spending"
             image={journaling.mobileImage ?? ""}
             imageAlt="Journaling mobile screen"
-            action={{ label: "View project", href: journaling.url, external: true }}
+            action={{ label: "See it live", href: journaling.url, external: true }}
             rowIcon={<CodeIcon className="w-3.5 h-3.5" strokeWidth={1.5} />}
-            rowText="react native · expo · ai"
+            rowText="React Native"
           />
         </div>
       </div>

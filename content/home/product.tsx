@@ -27,7 +27,7 @@ export const Product = () => {
         id="productWord"
       >
         <h2 className="display text-white text-[30vw] md:text-[25vw] leading-none tracking-[-0.06em] whitespace-nowrap select-none">
-          SHIPPED
+          LIVE NOW
         </h2>
       </div>
       <div
@@ -46,7 +46,7 @@ export const Product = () => {
               <p className="display text-xs text-black uppercase tracking-tight">
                 {heroContent.brand}
               </p>
-              <span className="text-xs text-black/70"> CASE 01 </span>
+              <span className="text-xs text-black/70"> PROJECT 01 </span>
             </div>
             <div className="relative mt-4 border-t border-black/20 pt-4">
               <p className="display text-xl text-black leading-tight tracking-tight">
@@ -55,7 +55,7 @@ export const Product = () => {
                 Hertz
               </p>
               <p className="text-xs text-black/70 mt-1">
-                AI healthcare · Personal
+                Healthcare app · Personal project
               </p>
             </div>
             <div className="relative mt-5 bg-white p-3">
@@ -91,7 +91,7 @@ export const Product = () => {
               <div className="p-4">
                 <p className="display text-base tracking-tight">Journaling</p>
                 <p className="text-xs text-white/60">
-                  Privacy-first finance, M-Pesa native
+                  Tracks your M-Pesa spending, privately
                 </p>
                 <a
                   className="mt-4 block w-full text-center text-xs font-medium bg-white text-black rounded-full py-2"
@@ -99,11 +99,11 @@ export const Product = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Open live app
+                  Try it live
                 </a>
                 <div className="mt-2 flex items-center justify-center gap-1.5 border border-white/30 rounded-md py-2">
                   <CodeIcon className="w-3.5 h-3.5" strokeWidth={1.5} />
-                  <span className="text-xs"> react native · expo · ai </span>
+                  <span className="text-xs"> Built with React Native </span>
                 </div>
                 <div className="mt-4 space-y-px">
                   <Link
@@ -142,10 +142,10 @@ export const Product = () => {
       <div className="absolute bottom-0 left-0 right-0 border-t border-white/30 z-20">
         <div className="px-5 md:px-8 py-5 flex items-end justify-between text-white">
           <p className="text-base font-semibold max-w-xs leading-snug">
-            Real products, live on the web. Open one.
+            Things I&apos;ve built that real people use. Take a look.
           </p>
           <p className="text-xs text-white/60 hidden sm:block">
-            Design · Build · Ship
+            Plan · Build · Launch
           </p>
         </div>
       </div>

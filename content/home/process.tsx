@@ -15,14 +15,14 @@ export const Process = () => (
     <div className="relative z-10 w-full max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-3 pt-20 pb-20">
       <article className="support-panel support-step">
         <p className="text-xs uppercase tracking-[0.2em] text-white/45">
-          01 / Scope
+          01 / Chat
         </p>
         <h3 className="display text-5xl md:text-6xl leading-none mt-6">
-          SCOPED
+          WE TALK
         </h3>
         <p className="text-sm mt-6 max-w-[220px]">
-          We talk through the problem, the users and the smallest useful
-          version.
+          You tell me what you need. I ask the questions that save you time and
+          money later.
         </p>
       </article>
       <article className="support-panel support-step bg-white text-black">
@@ -41,13 +41,13 @@ export const Process = () => (
       </article>
       <article className="support-panel support-step">
         <p className="text-xs uppercase tracking-[0.2em] text-white/45">
-          03 / Ship
+          03 / Launch
         </p>
         <h3 className="display text-5xl md:text-6xl leading-none mt-6">
-          SHIPPED
+          LAUNCHED
         </h3>
         <p className="text-sm mt-6 max-w-[220px]">
-          Docker and CI/CD, so it keeps shipping long after launch.
+          Then it goes live, and I help keep it running smoothly.
         </p>
       </article>
     </div>
@@ -57,11 +57,11 @@ export const Process = () => (
     >
       <div className="flex items-center justify-between">
         <p className="text-xs uppercase tracking-[0.18em] text-black/45">
-          Availability
+          Right now
         </p>
         <SparklesIcon className="w-4 h-4" />
       </div>
-      <p className="display text-4xl leading-none mt-4">OPEN FOR ROLES</p>
+      <p className="display text-4xl leading-none mt-4">OPEN TO WORK</p>
       <p className="text-sm font-semibold mt-1">
         {heroContent.profile.location}, Kenya
       </p>

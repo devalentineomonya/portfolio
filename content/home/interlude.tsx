@@ -20,7 +20,7 @@ export const Interlude = () => (
         className="display text-black text-[29vw] md:text-[24vw] leading-none tracking-[-0.06em] whitespace-nowrap select-none will-change-transform"
         id="skillsWord"
       >
-        FRONTEND BACKEND
+        WEBSITES AND APPS
       </h2>
     </div>
     <div
@@ -29,11 +29,12 @@ export const Interlude = () => (
     >
       <div className="px-5 md:px-8 py-5 grid grid-cols-1 md:grid-cols-3 gap-4 text-black">
         <p className="text-base font-semibold">
-          For teams, founders and curious builders.
+          For businesses, founders and teams.
         </p>
         <p className="text-base text-black/70 md:col-span-2 max-w-md">
-          Frontend, backend, DevOps and AI. Web, mobile and terminal apps that
-          solve real problems, shipped end to end.
+          I design, build and launch websites and apps, from the first idea to
+          the first customer. I handle the front and the back, so you only
+          deal with one person.
         </p>
       </div>
     </div>

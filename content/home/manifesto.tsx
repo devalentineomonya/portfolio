@@ -1,14 +1,14 @@
 const words = [
-  "Ideas",
-  "turn",
-  "into",
-  "working",
-  "systems,",
-  "from",
-  "first",
-  "pixel",
-  "to",
-  "production.",
+  "Honest,",
+  "simple",
+  "software",
+  "that",
+  "solves",
+  "real",
+  "problems",
+  "for",
+  "everyday",
+  "people.",
 ];
 
 export const Manifesto = () => (
@@ -34,8 +34,8 @@ export const Manifesto = () => (
       aria-hidden="true"
       className="absolute top-[12%] left-[8%] display text-[9vw] leading-none text-black/5 rotate-[-8deg]"
     >
-      REACT NESTJS DOCKER NEXTJS TYPESCRIPT DEVOPS AI MOBILE TUI SYSTEMS
+      WEBSITES APPS SHOPS CLINICS SCHOOLS STARTUPS TEAMS IDEAS
     </div>
-    <p className="section-label text-black/60">04 / Manifesto</p>
+    <p className="section-label text-black/60">04 / What I believe</p>
   </section>
 );

@@ -2,7 +2,7 @@ export const heroContent = {
   brand: "devalentine.",
   tagline: "Software engineer · Nairobi",
   word: "VALENTINE",
-  copy: "Frontend, backend and DevOps. Built into systems people actually use.",
+  copy: "I build websites and apps that are simple to use and made to last.",
   profile: {
     name: "Valentine Omonya",
     role: "Software Engineer",

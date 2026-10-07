@@ -70,8 +70,8 @@ export const Join = () => (
       })}
       <div className="absolute right-5 md:right-[8vw] top-[23%] md:top-[31%] max-w-xs text-black z-20">
         <p className="text-lg md:text-xl font-semibold leading-snug">
-          Got an idea, a product or a role to fill? Let&apos;s build something
-          great together. My inbox is always open.
+          Building something? Tell me what it is, who it&apos;s for and when you
+          need it. I&apos;ll tell you honestly if I&apos;m the right fit.
         </p>
         <a
           className="mt-4 inline-block text-sm font-semibold underline underline-offset-4 hover:opacity-60 transition-opacity"

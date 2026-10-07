@@ -32,9 +32,9 @@ export const Builder = () => {
           <header className="p-5 flex items-start justify-between border-b border-white/20">
             <div>
               <p className="display text-3xl tracking-tight leading-none">
-                CAREER LOG
+                MY STORY
               </p>
-              <p className="text-xs text-white/55 mt-2">Live resume / v.06</p>
+              <p className="text-xs text-white/55 mt-2">Where I&apos;ve worked so far</p>
             </div>
             <ScanFaceIcon
               className="w-5 h-5 text-white/60"
@@ -43,11 +43,11 @@ export const Builder = () => {
           </header>
           <div className="builder-module p-5" data-number="01">
             <p className="text-xs uppercase tracking-[0.2em] text-white/40">
-              Now
+              Right now
             </p>
             <p className="mt-2 text-sm text-white max-w-xs">
-              {transcom.roles[0].title} at {transcom.company}.{" "}
-              {transcom.roles[0].dateRange.replace(" - ", " to ")}.
+              Building business websites and tools at {transcom.company}, since{" "}
+              {transcom.roles[0].dateRange.split(" - ")[0]}.
             </p>
           </div>
           <div className="builder-module p-5" data-number="02">
@@ -55,7 +55,8 @@ export const Builder = () => {
               Community
             </p>
             <p className="mt-2 text-sm text-white max-w-xs">
-              Vice Chairperson and Development Lead, {society.company}.
+              Helping run {society.company} as vice chairperson, and leading its
+              developers.
             </p>
             <div className="mt-3 grid grid-cols-4 gap-1.5">
               {societyTech.map((tech) => (
@@ -78,19 +79,19 @@ export const Builder = () => {
             <div className="p-5 text-left text-sm font-semibold">
               {godan.company}
               <span className="block text-xs font-normal opacity-60 mt-0.5">
-                Frontend intern · 2025
+                Intern · 2025
               </span>
             </div>
           </div>
           <div className="builder-module grid grid-cols-2" data-number="04">
             <div className="p-5 text-left text-sm font-semibold border-r border-white/15">
-              Frontend
+              What you see
               <span className="block text-xs font-normal opacity-60 mt-0.5">
                 React · Next.js
               </span>
             </div>
             <div className="p-5 text-left text-sm font-semibold">
-              Backend
+              What you don&apos;t
               <span className="block text-xs font-normal opacity-60 mt-0.5">
                 NestJS · Docker
               </span>
@@ -118,7 +119,7 @@ export const Builder = () => {
           04
         </p>
         <p className="text-xs uppercase tracking-[0.18em] max-w-[180px]">
-          Companies. Five roles. Same craft.
+          Four teams, five roles, one habit: finishing what I start.
         </p>
       </div>
     </section>

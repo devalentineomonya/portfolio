@@ -29,11 +29,11 @@ export const Loader = () => (
         ))}
         <span className="loader-letter loader-dot">.</span>
       </div>
-      <div className="loader-tag">Ideas into working systems</div>
+      <div className="loader-tag">Websites and apps that work</div>
     </div>
     <div className="loader-meta">
-      <span>001 / Portfolio v6</span>
-      <span>Loading engineering presence</span>
+      <span>Hello, I&apos;m Valentine</span>
+      <span>One moment</span>
     </div>
     <div className="loader-strips">
       <span className="loader-strip"></span>

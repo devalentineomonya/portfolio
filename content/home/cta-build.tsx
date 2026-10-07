@@ -17,7 +17,7 @@ export const CtaBuild = () => (
       BUILT
     </div>
     <div className="sweep-word text-white" id="shippedWord">
-      SHIPPED
+      LAUNCHED
     </div>
   </section>
 );
