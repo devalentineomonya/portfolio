@@ -21,7 +21,7 @@ export const workProjects: WorkProject[] = [
     title: "Nine Hertz",
     category: "Personal",
     description:
-      "An AI powered health care system with features like appointment scheduling, patient record management, reminders, medical insights.",
+      "A healthcare app for clinics. It handles bookings, patient records, reminders and helpful health insights, all in one place.",
     image: "/work/nine-hertz-desktop.webp",
     mobileImage: "/work/nine-hertz-mobile.webp",
     url: "https://medic.devalentine.com",
@@ -32,7 +32,7 @@ export const workProjects: WorkProject[] = [
     title: "Studio",
     category: "Brand",
     description:
-      "A dedicated brand website meticulously crafted to showcase my premium client work, technical case studies, and professional services.",
+      "My own studio website, where I show client work, case studies and the services I offer.",
     image: "/work/studio-desktop.webp",
     mobileImage: "/work/studio-mobile.webp",
     url: "https://studio.devalentine.com",
@@ -42,7 +42,7 @@ export const workProjects: WorkProject[] = [
     title: "lazyDLP",
     category: "Personal",
     description:
-      "A powerful, interactive command-line wrapper for yt-dlp, making it incredibly easy to download media without memorizing complex flags.",
+      "A friendlier way to use yt-dlp. A terminal app that downloads videos and audio without making you memorize commands.",
     image: "/work/lazydlp-desktop.webp",
     mobileImage: "/work/lazydlp-mobile.webp",
     url: "https://github.com/devalentineomonya/lazydlp",
@@ -53,7 +53,7 @@ export const workProjects: WorkProject[] = [
     title: "Journaling",
     category: "Personal",
     description:
-      "A privacy-first personal finance app that parses M-Pesa SMS messages natively to log transactions, track budgets, and provide AI spending insights.",
+      "A budgeting app that reads your M-Pesa messages and fills in your spending for you. It all stays private on your phone, with simple AI tips on top.",
     image: "/work/journaling-desktop.webp",
     mobileImage: "/work/journaling-mobile.webp",
     url: "https://journauling.devalentine.com/",
@@ -64,7 +64,7 @@ export const workProjects: WorkProject[] = [
     title: "University Computer Society",
     category: "Volunteer",
     description:
-      "The official web platform for a university computer society, serving as a central hub for members, events, and tech community resources.",
+      "The home of a university computer society, with members, events and tech resources in one place.",
     image: "/work/computer-society-desktop.webp",
     mobileImage: "/work/computer-society-mobile.webp",
     url: "https://computersocietyofkirinyaga.org",
@@ -74,7 +74,7 @@ export const workProjects: WorkProject[] = [
     title: "Tekobliss",
     category: "Client",
     description:
-      "A sleek, highly performant corporate website for Tekobliss, designed with a focus on modern branding and driving client conversions.",
+      "A fast, modern website for Tekobliss that shows off the brand and turns visitors into clients.",
     image: "/work/tekobliss-desktop.webp",
     mobileImage: "/work/tekobliss-mobile.webp",
     url: "https://tekobliss.com/",
@@ -84,7 +84,7 @@ export const workProjects: WorkProject[] = [
     title: "PBQ Simulator",
     category: "Client",
     description:
-      "An interactive Performance-Based Questions (PBQ) Simulator engineered to help students prepare for complex, hands-on IT certification exams.",
+      "A practice tool that lets students try hands-on IT exam questions before the real test.",
     image: "/work/pbq-simulator-desktop.webp",
     mobileImage: "/work/pbq-simulator-mobile.webp",
     url: "https://pbqsimulator.com/",
@@ -94,7 +94,7 @@ export const workProjects: WorkProject[] = [
     title: "Arorwet Secondary",
     category: "Client",
     description:
-      "A modern, accessible digital presence and school management portal for Arorwet Secondary School, streamlining information access.",
+      "A clear, easy-to-use website and portal for Arorwet Secondary School, so students and parents find what they need.",
     image: "/work/arorwet-desktop.webp",
     mobileImage: "/work/arorwet-mobile.webp",
     url: "https://www.arorwetsecondary.sc.ke/",
@@ -103,7 +103,7 @@ export const workProjects: WorkProject[] = [
   {
     title: "Shopping Cart",
     category: "Archived",
-    description: "A frontend e-commerce shopping cart implementation.",
+    description: "A shopping cart I built to practice how online stores work.",
     url: "https://shoppingcart.devalentine.com/",
     technologies: [],
     archived: true,
@@ -111,7 +111,7 @@ export const workProjects: WorkProject[] = [
   {
     title: "DevalExpenses",
     category: "Archived",
-    description: "A legacy financial tracking and budgeting web application.",
+    description: "An older expense tracker for keeping an eye on spending.",
     url: "https://expenses.devalentine.com",
     technologies: [],
     archived: true,
@@ -120,7 +120,7 @@ export const workProjects: WorkProject[] = [
     title: "PHP Job Portal",
     category: "Archived",
     description:
-      "A university class project for managing job applications, built with PHP.",
+      "A university class project where people post jobs and apply for them, built with PHP.",
     url: "https://php-job-management-portal.onrender.com/",
     technologies: [],
     archived: true,
@@ -128,7 +128,7 @@ export const workProjects: WorkProject[] = [
   {
     title: "DevalRide",
     category: "Archived",
-    description: "A legacy ride-hailing platform prototype interface.",
+    description: "An early prototype of a ride-hailing app.",
     url: "https://ride.devalentine.com",
     technologies: [],
     archived: true,

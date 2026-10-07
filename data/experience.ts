@@ -24,7 +24,7 @@ export const experiences: Experience[] = [
         dateRange: "May 2026 - Present",
         isCurrent: true,
         description:
-          "Building robust, tailored business solutions and enterprise applications using CodeIgniter, PHP, and WordPress to meet client requirements and streamline digital workflows.",
+          "I build custom websites and tools for business clients using PHP, CodeIgniter and WordPress, so their day-to-day work runs more smoothly.",
         technologies: [
           "php",
           "codeigniter",
@@ -45,7 +45,7 @@ export const experiences: Experience[] = [
         dateRange: "May 2026 - Present",
         isCurrent: true,
         description:
-          "Serving as the Assistant Vice Chairperson to oversee community operations, organize technical workshops, and lead strategic initiatives to foster a thriving ecosystem of student developers.",
+          "I help run the society day to day: organising workshops, supporting members and planning what we do next, so more students get into tech.",
         technologies: ["leadership", "teamwork", "community", "mentorship"],
       },
       {
@@ -53,7 +53,7 @@ export const experiences: Experience[] = [
         type: "Core",
         dateRange: "Sep 2025 - Present",
         description:
-          "Led both the frontend and backend engineering teams while personally building the core frontend architecture. Delivered a full-stack community platform integrating OpenAI APIs and M-Pesa payments, achieving 40% growth in active users.",
+          "I led both the front-end and back-end teams and built much of the front end myself. We delivered the society's platform with AI features and M-Pesa payments, and active users grew by 40%.",
         technologies: ["nestjs", "docker", "openai", "stripe", "rabbitmq"],
       },
     ],
@@ -67,7 +67,7 @@ export const experiences: Experience[] = [
         type: "Attachment",
         dateRange: "May 2025 - Jul 2025",
         description:
-          "Worked on full-stack projects using React and NestJS, managing code with Git and GitHub. Gained experience with Docker containers and Azure DevOps for CI/CD. Developed strong abilities in leadership, team collaboration, and technical writing.",
+          "I worked on real projects with React and NestJS, learned Docker and Azure DevOps for automated releases, and got better at leading, teamwork and writing things down clearly.",
         technologies: [
           "react",
           "nestjs",
@@ -88,7 +88,7 @@ export const experiences: Experience[] = [
         type: "Internship",
         dateRange: "Jan 2025 - Apr 2025",
         description:
-          "Contributed to frontend web development using React.js and Ant Design for the Smip Users Dashboard. Collaborated with the engineering team to build responsive, role-based user interfaces, helping streamline client workflows and improve overall UI/UX.",
+          "I built parts of a customer dashboard with React and Ant Design, working with the team on screens that adapt to each user's role and make their daily work easier.",
         technologies: ["react", "antdesign", "javascript", "ui/ux", "frontend"],
       },
     ],

@@ -15,7 +15,7 @@ export const stories: Story[] = [
     date: "Feb 15, 2026",
     readTime: "3 min read",
     description:
-      "A comprehensive guide to setting up a performant, developer-friendly blogging system using Next.js, MDX, and Shiki for syntax highlighting.",
+      "A step-by-step guide to building a fast, easy-to-write blog with Next.js and MDX.",
     url: "https://v5.devalentine.com/blogs/building-a-modern-blog-with-nextjs",
     tags: ["Next.js", "MDX"],
   },
@@ -25,7 +25,7 @@ export const stories: Story[] = [
     date: "Feb 10, 2026",
     readTime: "2 min read",
     description:
-      "Essential TypeScript patterns and practices every developer should know to write cleaner, safer, and more maintainable code.",
+      "Habits that make TypeScript code easier to read, safer to change and nicer to work with.",
     url: "https://v5.devalentine.com/blogs/typescript-best-practices",
     tags: ["TypeScript", "Best Practices"],
   },
@@ -35,7 +35,7 @@ export const stories: Story[] = [
     date: "Jan 28, 2026",
     readTime: "5 min read",
     description:
-      "A deep dive into how React Server Components (RSC) fundamentally change the way we build web applications, reducing bundle sizes and improving performance.",
+      "A plain-English look at React Server Components, and why they make websites lighter and faster.",
     url: "#",
     tags: ["React", "Architecture"],
   },
