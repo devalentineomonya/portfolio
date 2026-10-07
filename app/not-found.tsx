@@ -1,28 +1,31 @@
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
+import { ArrowRightIcon } from "@/components/ui/icons";
 
 export default function NotFound() {
   return (
-    <main className="flex-grow w-full px-6 flex flex-col items-center justify-center">
-      <div className="w-full max-w-2xl mx-auto text-center flex flex-col items-center border border-black p-12 sm:p-20 bg-gray-50 relative group">
-        <h1 className="text-7xl sm:text-9xl font-black tracking-tighter mb-4 text-black">
+    <main>
+      <section className="poster-section bg-ink text-white divider-grid flex flex-col items-center justify-center px-5">
+        <h1 className="huge-word relative z-10 text-white/10 text-[44vw] md:text-[32vw]">
           404
         </h1>
-        <h2 className="text-2xl sm:text-4xl font-bold tracking-tight mb-8">
-          Page Not Found.
-        </h2>
-        <p className="font-mono text-sm text-gray-600 mb-12 max-w-md">
-          The page you are looking for doesn't exist or has been moved to a
-          different url.
-        </p>
-
-        <Button href="/" variant="black">
-          <span className="group-hover:-translate-x-1 transition-transform duration-300 mr-2">
-            ←
-          </span>
-          GO BACK HOME
-        </Button>
-      </div>
+        <span className="hand absolute z-20 -rotate-12 select-none text-amber text-[18vw] md:text-[10vw]">
+          lost?
+        </span>
+        <div className="absolute inset-x-0 bottom-0 z-20 border-t border-white/25">
+          <div className="flex flex-col items-start gap-4 px-5 py-5 pr-48 md:px-8">
+            <p className="max-w-sm text-base font-semibold leading-snug">
+              This page doesn&apos;t exist or has moved to a different URL.
+            </p>
+            <Link
+              href="/"
+              className="group flex items-center gap-2 text-sm font-medium hover:opacity-60 transition-opacity"
+            >
+              Back home
+              <ArrowRightIcon className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+            </Link>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }

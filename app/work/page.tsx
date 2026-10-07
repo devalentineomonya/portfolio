@@ -1,45 +1,63 @@
-import { WorkCard } from "@/components/ui/work-card";
+import type { Metadata } from "next";
+import { PageHeader } from "@/components/layout/page-header";
+import { SiteFooter } from "@/components/layout/site-footer";
+import { ProjectCard } from "@/components/ui/project-card";
 import { workProjects } from "@/data/work";
+import { ArrowUpRightIcon } from "@/components/ui/icons";
+
+export const metadata: Metadata = {
+  title: "Work",
+  description:
+    "Apps and tools Valentine Omonya has built to solve real problems: healthcare, finance, education and developer tooling.",
+};
 
 export default function WorkPage() {
-  const activeProjects = workProjects.filter((p) => !p.archived);
-  const archivedProjects = workProjects.filter((p) => p.archived);
+  const active = workProjects.filter((p) => !p.archived);
+  const archived = workProjects.filter((p) => p.archived);
 
   return (
-    <main className="flex-grow w-full px-6 flex flex-col pb-24 pt-12 sm:pt-20">
-      <div className="w-full max-w-6xl mx-auto">
-        <h1 className="text-5xl sm:text-7xl font-black tracking-tighter mb-6 text-black">
-          Work.
-        </h1>
-        <p className="font-mono text-sm text-gray-600 mb-16 max-w-2xl">
-          A collection of robust, scalable applications and tools I've built to
-          solve real-world problems.
-        </p>
+    <main>
+      <PageHeader
+        word="WORK"
+        tone="violet"
+        copy={`Apps and tools built to solve real problems. ${active.length} shipped, ${archived.length} archived.`}
+      />
+      <section className="bg-lavender text-black">
+        <div className="mx-auto max-w-6xl px-5 py-12 md:px-8 md:py-16">
+          <p className="mb-5 text-xs font-bold uppercase tracking-[0.18em] text-black/60">
+            Shipped / {String(active.length).padStart(2, "0")}
+          </p>
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            {active.map((project) => (
+              <ProjectCard key={project.title} project={project} />
+            ))}
+          </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
-          {activeProjects.map((project) => (
-            <div
-              key={project.title}
-              className={project.featured ? "md:col-span-2" : ""}
-            >
-              <WorkCard project={project} />
-            </div>
-          ))}
+          <p className="mb-2 mt-16 text-xs font-bold uppercase tracking-[0.18em] text-black/60">
+            Archived / {String(archived.length).padStart(2, "0")}
+          </p>
+          <div>
+            {archived.map((project) => (
+              <a
+                key={project.title}
+                href={project.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex flex-col gap-1 border-t border-black/25 py-4 transition-opacity hover:opacity-60 sm:flex-row sm:items-baseline sm:justify-between sm:gap-8"
+              >
+                <span className="display flex items-center gap-2 text-2xl">
+                  {project.title}
+                  <ArrowUpRightIcon className="h-4 w-4 transition-transform duration-300 group-hover:rotate-45" />
+                </span>
+                <span className="max-w-xl text-sm text-black/70">
+                  {project.description}
+                </span>
+              </a>
+            ))}
+          </div>
         </div>
-
-        {archivedProjects.length > 0 && (
-          <>
-            <h2 className="text-3xl sm:text-4xl font-black tracking-tighter mb-8 mt-32 border-t border-black pt-16 text-black">
-              Archived.
-            </h2>
-            <div className="flex flex-col gap-4 w-full opacity-80 hover:opacity-100 transition-opacity duration-300">
-              {archivedProjects.map((project) => (
-                <WorkCard key={project.title} project={project} />
-              ))}
-            </div>
-          </>
-        )}
-      </div>
+        <SiteFooter />
+      </section>
     </main>
   );
 }
