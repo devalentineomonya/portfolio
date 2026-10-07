@@ -3,12 +3,16 @@ export const heroContent = {
   tagline: "Software engineer · Nairobi",
   word: "VALENTINE",
   copy: "I build websites, mobile apps and the systems behind them for businesses and teams.",
+  examples:
+    "Think a clinic booking app, a school website or a budgeting app for M-Pesa.",
   status: "Software engineer in Nairobi. Open to new roles and projects.",
   services: [
-    "Websites for businesses and schools",
-    "Mobile and web apps",
-    "The systems behind them: payments, data, hosting",
+    "Websites for shops, schools and businesses",
+    "Apps for phones and the web",
+    "The behind-the-scenes: logins, payments, data",
   ],
+  story:
+    "I'm Valentine, a software engineer in Nairobi. I build the things people use every day: clinic bookings, school websites, M-Pesa budgeting. Simple, fast and made to last.",
   profile: {
     name: "Valentine Omonya",
     role: "Software Engineer",

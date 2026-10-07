@@ -156,11 +156,14 @@ export const Hero = () => {
         id="heroCopy"
       >
         <div className="px-5 md:px-8 pt-5 pb-[5.5rem] md:pb-5 flex items-end justify-between gap-6 text-white">
-          <div className="max-w-[15rem] sm:max-w-md">
+          <div className="max-w-[15rem] sm:max-w-lg">
             <p className="text-base md:text-lg font-medium leading-snug">
               {heroContent.copy}
             </p>
-            <p className="mt-2 hidden text-sm text-white/80 sm:block">
+            <p className="mt-2 hidden text-base text-white/90 sm:block">
+              {heroContent.examples}
+            </p>
+            <p className="mt-2 hidden text-sm text-white/70 sm:block">
               {heroContent.status}
             </p>
           </div>

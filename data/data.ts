@@ -3,7 +3,7 @@ export const navLinks = [
   { label: "Featured", href: "/#product" },
   { label: "Work", href: "/#archive" },
   { label: "Experience", href: "/#builder" },
-  { label: "Notes", href: "/#board" },
+  { label: "More", href: "/#board" },
   { label: "Contact", href: "/#join" },
 ];
 
