@@ -20,7 +20,7 @@ export const Interlude = () => (
         className="display text-black text-[29vw] md:text-[24vw] leading-none tracking-[-0.06em] whitespace-nowrap select-none will-change-transform"
         id="skillsWord"
       >
-        I BUILD WEBSITES AND APPS
+        I BUILD WEB AND MOBILE APPS
       </h2>
     </div>
     <div
@@ -29,13 +29,12 @@ export const Interlude = () => (
     >
       <div className="px-5 md:px-8 py-5 grid grid-cols-1 md:grid-cols-3 gap-4 text-black">
         <p className="text-base font-semibold">
-          A shop that needs a website. A clinic that needs bookings. A team
-          that needs a tool.
+          Front end, back end and the servers they run on.
         </p>
         <p className="text-base text-black/70 md:col-span-2 max-w-lg">
-          You tell me the problem. I design it, build it and put it online, from
-          the first idea to the first customer. What you see on screen and what
-          runs behind it, handled by one person.
+          I take features from idea to production: React and Next.js on the
+          front, NestJS and PHP on the back, Docker and CI/CD to ship it. I&apos;ve
+          done it inside teams and on my own.
         </p>
       </div>
     </div>

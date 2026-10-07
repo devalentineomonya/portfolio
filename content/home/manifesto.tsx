@@ -25,7 +25,7 @@ export const Manifesto = () => (
       aria-hidden="true"
       className="absolute top-[12%] left-[8%] display text-[9vw] leading-none text-black/5 rotate-[-8deg]"
     >
-      WEBSITES APPS SHOPS CLINICS SCHOOLS STARTUPS TEAMS IDEAS
+      REACT NEXTJS NESTJS TYPESCRIPT DOCKER LINUX MYSQL MOBILE
     </div>
     <p className="section-label text-black/60">04 / A little about me</p>
   </section>

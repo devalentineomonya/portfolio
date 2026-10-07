@@ -21,8 +21,8 @@ export const Process = () => (
           WE TALK
         </h3>
         <p className="text-sm mt-6 max-w-[220px]">
-          You tell me what you need and who it&apos;s for. I ask a few questions
-          and give you an honest plan.
+          I start by understanding the problem and the people it&apos;s for, then
+          agree on the smallest useful version.
         </p>
       </article>
       <article className="support-panel support-step bg-white text-black">
@@ -33,13 +33,15 @@ export const Process = () => (
           BUILT
         </h3>
         <p className="text-sm mt-6 max-w-[220px] text-black/70">
-          I build it step by step and show you progress as it grows.
+          I build in small steps, review often and keep the code easy for the next person.
         </p>
         <a
           className="mt-6 block w-full text-center bg-black text-white text-sm font-semibold py-3 rounded-full"
-          href={heroContent.links.email}
+          href={heroContent.links.resume}
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          Say hello
+          See my résumé
         </a>
       </article>
       <article className="support-panel support-step">
@@ -50,7 +52,7 @@ export const Process = () => (
           LAUNCHED
         </h3>
         <p className="text-sm mt-6 max-w-[220px]">
-          It goes live on the internet, and I help keep it running smoothly.
+          Docker and CI/CD put it live, then I watch it, fix it and improve it.
         </p>
       </article>
     </div>
@@ -66,7 +68,7 @@ export const Process = () => (
       </div>
       <p className="display text-4xl leading-none mt-4">OPEN TO WORK</p>
       <p className="text-sm font-semibold mt-1">
-        Full-time roles and projects · {heroContent.profile.location}
+        Full-time roles · {heroContent.profile.location}
       </p>
       <p className="text-xs text-black/55 mt-2">
         {heroContent.links.emailAddress}
