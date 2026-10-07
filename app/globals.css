@@ -1,12 +1,410 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-background: #ffffff;
-  --color-foreground: #171717;
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-inter);
+}
+
+/*
+ * Theme: Journaling's violet (#6d27da) and its supporting palette. Violet and
+ * iris carry the dark sections, lilac and lavender the light ones, amber is the
+ * one warm accent. Section backgrounds stay very dark or very light on purpose:
+ * the fixed nav uses mix-blend-difference and mid-tones would make it unreadable.
+ */
+@theme {
+  --color-violet: #6d27da;
+  --color-iris: #4f46e5;
+  --color-lilac: #cbb6f6;
+  --color-lavender: #ece8f3;
+  --color-ink: #0f0a1f;
+  --color-amber: #f5a623;
 }
 
 :root {
   color-scheme: light;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    margin: 0;
+    font-family: var(--font-inter), "Inter", sans-serif;
+    background: var(--color-ink);
+    color: var(--color-ink);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: geometricPrecision;
+  }
+  ::selection {
+    background: var(--color-ink);
+    color: var(--color-amber);
+  }
+}
+
+/*
+ * Poster system ported 1:1 from the NOEMA reference. It lives in the
+ * components layer so Tailwind utilities (bg-white, text-black, ...) can still
+ * override it, the same way the reference's CDN stylesheet did.
+ */
+@layer components {
+  .display {
+    font-family: var(--font-anton), "Anton", sans-serif;
+  }
+  .hand {
+    font-family: var(--font-caveat), "Caveat", cursive;
+  }
+  .poster-section {
+    position: relative;
+    min-height: 100svh;
+    width: 100%;
+    overflow: hidden;
+    isolation: isolate;
+  }
+  .divider-grid::before,
+  .divider-grid::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+  }
+  .divider-grid::before {
+    background-image:
+      linear-gradient(to right, rgba(255, 255, 255, 0.18) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.18) 1px, transparent 1px);
+    background-size:
+      20vw 100%,
+      100% 25vh;
+  }
+  .divider-grid.dark-lines::before {
+    background-image:
+      linear-gradient(to right, rgba(0, 0, 0, 0.16) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(0, 0, 0, 0.16) 1px, transparent 1px);
+  }
+  .huge-word {
+    font-family: var(--font-anton), "Anton", sans-serif;
+    font-size: clamp(8rem, 28vw, 30rem);
+    line-height: 0.78;
+    letter-spacing: -0.055em;
+    white-space: nowrap;
+    user-select: none;
+  }
+  .profile-card {
+    background: var(--color-ink);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    box-shadow: 32px 48px 80px rgba(0, 0, 0, 0.45);
+  }
+  .soft-sheen::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(
+      115deg,
+      rgba(255, 255, 255, 0.18),
+      transparent 34%,
+      rgba(0, 0, 0, 0.32)
+    );
+    mix-blend-mode: screen;
+  }
+  .section-label {
+    position: absolute;
+    left: 1.25rem;
+    bottom: 1.25rem;
+    z-index: 10;
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  .manifesto-sentence {
+    max-width: min(1180px, 92vw);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0.18em 0.28em;
+    text-align: center;
+  }
+  .manifesto-word {
+    display: inline-block;
+    will-change: transform, opacity;
+    font-family: var(--font-anton), "Anton", sans-serif;
+    font-size: clamp(2.4rem, 7.8vw, 7.4rem);
+    line-height: 0.9;
+    letter-spacing: -0.045em;
+    text-transform: uppercase;
+  }
+  .archive-grid {
+    position: relative;
+    z-index: 5;
+    width: min(88vw, 1120px);
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 10px;
+    will-change: transform;
+  }
+  .archive-img {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    filter: grayscale(1) contrast(1.08) saturate(0.4);
+    transform-origin: center center;
+    will-change: transform, opacity;
+    transition: filter 0.4s ease;
+  }
+  .archive-img:hover,
+  .archive-img:focus-visible {
+    filter: none;
+  }
+  .builder-shell {
+    width: min(470px, 88vw);
+    min-height: 570px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: var(--color-ink);
+    color: white;
+    box-shadow: -32px 44px 90px rgba(0, 0, 0, 0.42);
+  }
+  .builder-module {
+    position: relative;
+    border-top: 1px solid rgba(255, 255, 255, 0.16);
+    will-change: transform, opacity;
+  }
+  .builder-module:first-child {
+    border-top: 0;
+  }
+  .builder-module::before {
+    content: attr(data-number);
+    position: absolute;
+    top: 0.9rem;
+    right: 1rem;
+    font-size: 0.64rem;
+    letter-spacing: 0.16em;
+    color: rgba(255, 255, 255, 0.45);
+  }
+  .op-card {
+    min-height: 158px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: var(--color-ink);
+    color: white;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 18px 22px 42px rgba(0, 0, 0, 0.28);
+    will-change: transform, opacity;
+  }
+  .support-panel {
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    background: var(--color-ink);
+    color: white;
+    min-height: 310px;
+    padding: 1.25rem;
+    will-change: transform, opacity;
+  }
+  .sweep-word {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-anton), "Anton", sans-serif;
+    font-size: clamp(6.8rem, 26vw, 25rem);
+    line-height: 0.78;
+    letter-spacing: -0.055em;
+    white-space: nowrap;
+    opacity: 0;
+    will-change: transform, opacity;
+  }
+
+  /* ======================= ON LOAD INTRO ======================= */
+  body.is-loading {
+    height: 100svh;
+    overflow: hidden;
+  }
+  .noema-loader {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    overflow: hidden;
+    background: var(--color-ink);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    isolation: isolate;
+  }
+  .loader-grid {
+    position: absolute;
+    inset: 0;
+    opacity: 0.28;
+    background-image:
+      linear-gradient(to right, rgba(255, 255, 255, 0.16) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.16) 1px, transparent 1px);
+    background-size:
+      20vw 100%,
+      100% 25vh;
+    pointer-events: none;
+  }
+  .loader-mark {
+    position: absolute;
+    top: 1.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 4;
+    width: 34px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    opacity: 0.9;
+  }
+  .loader-mark svg {
+    width: 34px;
+    height: 18px;
+    overflow: visible;
+  }
+  .loader-brand {
+    position: relative;
+    z-index: 5;
+    text-align: center;
+    overflow: hidden;
+    padding: 0.4rem 0.6rem;
+  }
+  .loader-brand-main {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 0.015em;
+    font-family: var(--font-anton), "Anton", sans-serif;
+    font-size: clamp(2.6rem, 10vw, 10rem);
+    line-height: 0.78;
+    letter-spacing: -0.055em;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+  .loader-letter {
+    display: inline-block;
+    will-change: transform, opacity;
+  }
+  .loader-dot {
+    color: var(--color-amber);
+    margin-left: 0.015em;
+  }
+  .loader-tag {
+    margin-top: 0.75rem;
+    font-size: clamp(0.72rem, 1.1vw, 0.9rem);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.62);
+    will-change: transform, opacity;
+  }
+  .loader-meta {
+    position: absolute;
+    left: 1.25rem;
+    right: 1.25rem;
+    bottom: 1.25rem;
+    z-index: 5;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 1rem;
+    font-size: 0.68rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.62);
+    will-change: transform, opacity;
+  }
+  .loader-strips {
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    align-items: end;
+    pointer-events: none;
+  }
+  .loader-strip {
+    height: 100%;
+    transform: scaleY(0);
+    transform-origin: bottom;
+    border-right: 1px solid rgba(0, 0, 0, 0.12);
+    will-change: transform;
+  }
+  .loader-strip:nth-child(1) {
+    background: var(--color-lavender);
+  }
+  .loader-strip:nth-child(2) {
+    background: var(--color-violet);
+  }
+  .loader-strip:nth-child(3) {
+    background: #ffffff;
+  }
+  .loader-strip:nth-child(4) {
+    background: var(--color-amber);
+  }
+  .loader-strip:nth-child(5) {
+    background: var(--color-iris);
+  }
+  .loader-strip:nth-child(6) {
+    background: #ffffff;
+  }
+  .loader-strip:nth-child(7) {
+    background: var(--color-lavender);
+  }
+  .loader-scanline {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 6;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.8);
+    transform-origin: left;
+    transform: scaleX(0);
+    will-change: transform;
+  }
+
+  @media (max-width: 768px) {
+    .huge-word {
+      font-size: clamp(5.5rem, 37vw, 14rem);
+      letter-spacing: -0.065em;
+    }
+    .archive-grid {
+      width: 92vw;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 6px;
+    }
+    .builder-shell {
+      min-height: auto;
+    }
+    .section-label {
+      left: 1rem;
+      bottom: 1rem;
+    }
+    .poster-section {
+      min-height: 100svh;
+    }
+  }
+  @media (min-width: 768px) {
+    .poster-section {
+      min-height: auto !important;
+      height: 100svh !important;
+      max-height: 1080px !important;
+    }
+  }
+}
+
+/* Inner pages are plain scrolling posters, not pinned sections. */
+@layer components {
+  .poster-static.poster-section {
+    min-height: 62svh !important;
+    height: auto !important;
+    max-height: none !important;
+  }
 }
