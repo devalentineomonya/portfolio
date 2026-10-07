@@ -20,7 +20,7 @@ export const Interlude = () => (
         className="display text-black text-[29vw] md:text-[24vw] leading-none tracking-[-0.06em] whitespace-nowrap select-none will-change-transform"
         id="skillsWord"
       >
-        WEBSITES AND APPS
+        I BUILD WEBSITES AND APPS
       </h2>
     </div>
     <div
