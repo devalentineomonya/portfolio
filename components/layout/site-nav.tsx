@@ -47,19 +47,29 @@ export const SiteNav = () => {
         </div>
         <div className="flex items-center gap-5 text-sm font-medium pt-1 pointer-events-auto">
           <a
-            className="hover:opacity-60 transition-opacity"
+            className="hover:opacity-60 transition-opacity hidden sm:block"
+            href={heroContent.links.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn
+          </a>
+          <a
+            className="hover:opacity-60 transition-opacity hidden sm:block"
             href={heroContent.links.github}
             target="_blank"
             rel="noopener noreferrer"
           >
             GitHub
           </a>
-          <Link
-            className="hover:opacity-60 transition-opacity hidden sm:block"
-            href="/#join"
+          <a
+            className="hover:opacity-60 transition-opacity"
+            href={heroContent.links.resume}
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            Say hello
-          </Link>
+            Résumé
+          </a>
           <button
             type="button"
             aria-label={open ? "Close menu" : "Open menu"}
@@ -96,6 +106,25 @@ export const SiteNav = () => {
                 0{index + 1}
               </span>
             </Link>
+          ))}
+        </div>
+        <div className="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-sm text-white/70">
+          {[
+            ["LinkedIn", heroContent.links.linkedin],
+            ["GitHub", heroContent.links.github],
+            ["Résumé", heroContent.links.resume],
+            ["Devaltech (client work)", heroContent.links.studio],
+          ].map(([label, href]) => (
+            <a
+              key={label}
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              tabIndex={open ? 0 : -1}
+              className="hover:text-white transition-colors"
+            >
+              {label}
+            </a>
           ))}
         </div>
       </div>

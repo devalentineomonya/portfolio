@@ -29,7 +29,7 @@ export const Loader = () => (
         ))}
         <span className="loader-letter loader-dot">.</span>
       </div>
-      <div className="loader-tag">Websites and apps that work</div>
+      <div className="loader-tag">Web and mobile products, front to back</div>
     </div>
     <div className="loader-meta">
       <span>Hello, I&apos;m Valentine</span>

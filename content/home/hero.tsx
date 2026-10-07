@@ -184,11 +184,16 @@ export const Hero = () => {
         <ul className="mt-3">
           {heroContent.services.map((service, index) => (
             <li
-              key={service}
+              key={service.title}
               className="flex gap-3 border-t border-white/30 py-2 text-sm md:text-base font-medium leading-snug"
             >
               <span className="pt-0.5 text-xs text-white/60">0{index + 1}</span>
-              {service}
+              <span>
+                {service.title}
+                <span className="block text-xs md:text-sm font-normal text-white/75">
+                  {service.detail}
+                </span>
+              </span>
             </li>
           ))}
         </ul>
