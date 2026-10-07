@@ -7,7 +7,7 @@ import { stories } from "@/data/stories";
 export const metadata: Metadata = {
   title: "Stories",
   description:
-    "Thoughts, explorations and tutorials on software engineering and building products.",
+    "Notes on software, learning and building things people use.",
 };
 
 export default function StoriesPage() {
@@ -16,7 +16,7 @@ export default function StoriesPage() {
       <PageHeader
         word="STORIES"
         tone="iris"
-        copy="Thoughts, explorations and tutorials on software engineering and building products."
+        copy="Things I'm learning, and writing about along the way."
       />
       <section className="bg-lavender text-black">
         <div className="mx-auto max-w-6xl px-5 py-12 md:px-8 md:py-16">

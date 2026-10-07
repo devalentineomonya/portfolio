@@ -14,7 +14,7 @@ export default function NotFound() {
         <div className="absolute inset-x-0 bottom-0 z-20 border-t border-white/25">
           <div className="flex flex-col items-start gap-4 px-5 py-5 pr-48 md:px-8">
             <p className="max-w-sm text-base font-semibold leading-snug">
-              This page doesn&apos;t exist or has moved to a different URL.
+              Hmm, I can&apos;t find that page. It may have moved.
             </p>
             <Link
               href="/"

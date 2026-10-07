@@ -6,7 +6,7 @@ import { experiences } from "@/data/experience";
 export const metadata: Metadata = {
   title: "Experience",
   description:
-    "Software engineering roles, leadership and technical attachments across Kenya.",
+    "Where Valentine Omonya has worked, and what the work involved.",
 };
 
 export default function ExperiencePage() {
@@ -15,7 +15,7 @@ export default function ExperiencePage() {
       <PageHeader
         word="CAREER"
         tone="lilac"
-        copy="Software engineering roles, leadership and technical attachments."
+        copy="Where I've worked, and what I did there."
       />
       <section className="bg-lavender text-black">
         <div className="mx-auto max-w-6xl px-5 py-12 md:px-8 md:py-16">

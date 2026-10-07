@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     template: "%s | Valentine Omonya",
   },
   description:
-    "Valentine Omonya is a Software Engineer based in Kenya specializing in frontend and full-stack development, building robust business solutions and enterprise applications.",
+    "Valentine Omonya is a software engineer in Nairobi, Kenya. He builds websites, apps and the systems behind them for businesses and teams, and is open to new roles and projects.",
   keywords: [
     "Valentine Omonya",
     "Software Engineer",
@@ -50,14 +50,14 @@ export const metadata: Metadata = {
     url: "https://devalentine.com",
     title: "Valentine Omonya | Software Engineer",
     description:
-      "Valentine Omonya is a Software Engineer based in Kenya specializing in frontend and full-stack development.",
+      "Valentine Omonya is a software engineer in Nairobi, Kenya who builds websites and apps for businesses and teams.",
     siteName: "Valentine Omonya Portfolio",
   },
   twitter: {
     card: "summary_large_image",
     title: "Valentine Omonya | Software Engineer",
     description:
-      "Valentine Omonya is a Software Engineer based in Kenya specializing in frontend and full-stack development.",
+      "Valentine Omonya is a software engineer in Nairobi, Kenya who builds websites and apps for businesses and teams.",
     creator: "@devalentine_",
   },
 };

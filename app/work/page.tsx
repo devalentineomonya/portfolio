@@ -8,7 +8,7 @@ import { ArrowUpRightIcon } from "@/components/ui/icons";
 export const metadata: Metadata = {
   title: "Work",
   description:
-    "Apps and tools Valentine Omonya has built to solve real problems: healthcare, finance, education and developer tooling.",
+    "Websites and apps built by Valentine Omonya for clinics, schools, businesses and everyday people.",
 };
 
 export default function WorkPage() {
@@ -20,12 +20,12 @@ export default function WorkPage() {
       <PageHeader
         word="WORK"
         tone="violet"
-        copy={`Apps and tools built to solve real problems. ${active.length} shipped, ${archived.length} archived.`}
+        copy={`Websites and apps I've built. ${active.length} live, ${archived.length} retired.`}
       />
       <section className="bg-lavender text-black">
         <div className="mx-auto max-w-6xl px-5 py-12 md:px-8 md:py-16">
           <p className="mb-5 text-xs font-bold uppercase tracking-[0.18em] text-black/60">
-            Shipped / {String(active.length).padStart(2, "0")}
+            Live / {String(active.length).padStart(2, "0")}
           </p>
           <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {active.map((project) => (
@@ -34,7 +34,7 @@ export default function WorkPage() {
           </div>
 
           <p className="mb-2 mt-16 text-xs font-bold uppercase tracking-[0.18em] text-black/60">
-            Archived / {String(archived.length).padStart(2, "0")}
+            Older projects / {String(archived.length).padStart(2, "0")}
           </p>
           <div>
             {archived.map((project) => (
