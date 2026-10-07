@@ -1,17 +1,28 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Anton, Caveat, Inter } from "next/font/google";
 import "./globals.css";
-import { Navbar } from "@/components/layout/navbar";
-import { Footer } from "@/components/layout/footer";
+import { SiteNav } from "@/components/layout/site-nav";
+import { CreateCta } from "@/components/layout/create-cta";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const anton = Anton({
+  variable: "--font-anton",
   subsets: ["latin"],
+  weight: "400",
+  display: "swap",
+});
+
+const caveat = Caveat({
+  variable: "--font-caveat",
+  subsets: ["latin"],
+  weight: ["600", "700"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -59,12 +70,12 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased scroll-smooth bg-white text-black`}
+      className={`${inter.variable} ${anton.variable} ${caveat.variable}`}
     >
-      <body className="min-h-full flex flex-col selection:bg-black selection:text-white relative bg-white text-black font-sans">
-        <Navbar />
+      <body className="bg-ink antialiased overflow-x-hidden">
+        <SiteNav />
         {children}
-        <Footer />
+        <CreateCta />
       </body>
     </html>
   );
