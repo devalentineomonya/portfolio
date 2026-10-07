@@ -29,12 +29,13 @@ export const Interlude = () => (
     >
       <div className="px-5 md:px-8 py-5 grid grid-cols-1 md:grid-cols-3 gap-4 text-black">
         <p className="text-base font-semibold">
-          For businesses, founders and teams.
+          A shop that needs a website. A clinic that needs bookings. A team
+          that needs a tool.
         </p>
-        <p className="text-base text-black/70 md:col-span-2 max-w-md">
-          I design, build and launch websites and apps, from the first idea to
-          the first customer. I handle the front and the back, so you only
-          deal with one person.
+        <p className="text-base text-black/70 md:col-span-2 max-w-lg">
+          You tell me the problem. I design it, build it and put it online, from
+          the first idea to the first customer. What you see on screen and what
+          runs behind it, handled by one person.
         </p>
       </div>
     </div>

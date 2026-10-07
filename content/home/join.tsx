@@ -79,6 +79,17 @@ export const Join = () => (
         >
           {heroContent.links.emailAddress}
         </a>
+        <p className="mt-3 text-sm">
+          Hiring?{" "}
+          <a
+            className="font-semibold underline underline-offset-4 hover:opacity-60 transition-opacity"
+            href={heroContent.links.resume}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Here&apos;s my résumé.
+          </a>
+        </p>
         <svg
           className="w-24 md:w-32 mt-6 ml-auto text-black"
           fill="none"

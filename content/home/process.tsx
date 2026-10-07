@@ -21,8 +21,8 @@ export const Process = () => (
           WE TALK
         </h3>
         <p className="text-sm mt-6 max-w-[220px]">
-          You tell me what you need. I ask the questions that save you time and
-          money later.
+          You tell me what you need and who it&apos;s for. I ask a few questions
+          and give you an honest plan.
         </p>
       </article>
       <article className="support-panel support-step bg-white text-black">
@@ -32,8 +32,11 @@ export const Process = () => (
         <h3 className="display text-5xl md:text-6xl leading-none mt-6">
           BUILT
         </h3>
+        <p className="text-sm mt-6 max-w-[220px] text-black/70">
+          I build it step by step and show you progress as it grows.
+        </p>
         <a
-          className="mt-8 block w-full text-center bg-black text-white text-sm font-semibold py-3 rounded-full"
+          className="mt-6 block w-full text-center bg-black text-white text-sm font-semibold py-3 rounded-full"
           href={heroContent.links.email}
         >
           Say hello
@@ -47,7 +50,7 @@ export const Process = () => (
           LAUNCHED
         </h3>
         <p className="text-sm mt-6 max-w-[220px]">
-          Then it goes live, and I help keep it running smoothly.
+          It goes live on the internet, and I help keep it running smoothly.
         </p>
       </article>
     </div>
@@ -63,7 +66,7 @@ export const Process = () => (
       </div>
       <p className="display text-4xl leading-none mt-4">OPEN TO WORK</p>
       <p className="text-sm font-semibold mt-1">
-        {heroContent.profile.location}, Kenya
+        Full-time roles and projects · {heroContent.profile.location}
       </p>
       <p className="text-xs text-black/55 mt-2">
         {heroContent.links.emailAddress}

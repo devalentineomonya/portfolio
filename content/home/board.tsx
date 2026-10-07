@@ -73,7 +73,7 @@ export const Board = () => (
       className="huge-word absolute z-0 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
       id="boardWord"
     >
-      NOTES
+      MORE
     </h2>
     <div className="relative z-10 w-full max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
       {cards.map((card) => {

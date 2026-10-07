@@ -38,7 +38,7 @@ export const Archive = () => (
       className="huge-word absolute z-0 text-white/10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
       id="archiveWord"
     >
-      ARCHIVE
+      MY WORK
     </h2>
     <div className="archive-grid">
       {shots.map((shot, index) => (
@@ -68,10 +68,10 @@ export const Archive = () => (
     <div className="absolute bottom-0 left-0 right-0 border-t border-white/25 z-10">
       <div className="px-5 md:px-8 py-5 flex items-end justify-between text-white">
         <p className="text-base font-semibold max-w-sm leading-snug">
-          A few of the things I&apos;ve built over the years.
+          Eight projects: clinics, schools, money, exam prep and more. Tap any screen to visit the site.
         </p>
         <p className="text-xs text-white/55 hidden sm:block">
-          15 screens from 8 projects
+          15 screens
         </p>
       </div>
     </div>

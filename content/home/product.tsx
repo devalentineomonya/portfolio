@@ -142,7 +142,7 @@ export const Product = () => {
       <div className="absolute bottom-0 left-0 right-0 border-t border-white/30 z-20">
         <div className="px-5 md:px-8 py-5 flex items-end justify-between text-white">
           <p className="text-base font-semibold max-w-xs leading-snug">
-            Things I&apos;ve built that real people use. Take a look.
+            Two of the apps I&apos;ve built that are live today. Open one and try it.
           </p>
           <p className="text-xs text-white/60 hidden sm:block">
             Plan · Build · Launch

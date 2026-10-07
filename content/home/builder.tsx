@@ -24,7 +24,7 @@ export const Builder = () => {
         className="huge-word absolute left-[-4vw] top-1/2 -translate-y-1/2 z-0 text-black"
         id="buildWord"
       >
-        BUILD
+        TEAMS
       </h2>
       <div className="relative z-10 min-h-screen grid grid-cols-1 lg:grid-cols-2 items-center gap-8 px-5 md:px-8 pt-24 pb-20">
         <div className="hidden lg:block"></div>
@@ -58,7 +58,10 @@ export const Builder = () => {
               Helping run {society.company} as vice chairperson, and leading its
               developers.
             </p>
-            <div className="mt-3 grid grid-cols-4 gap-1.5">
+            <p className="mt-3 text-[0.65rem] uppercase tracking-[0.18em] text-white/40">
+              Built with
+            </p>
+            <div className="mt-1.5 grid grid-cols-4 gap-1.5">
               {societyTech.map((tech) => (
                 <span
                   key={tech}
@@ -119,7 +122,7 @@ export const Builder = () => {
           04
         </p>
         <p className="text-xs uppercase tracking-[0.18em] max-w-[180px]">
-          Four teams, five roles, one habit: finishing what I start.
+          Teams I&apos;ve worked with, in five roles. Each one taught me something new.
         </p>
       </div>
     </section>
