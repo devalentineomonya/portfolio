@@ -7,9 +7,9 @@ import { Archive } from "@/content/home/archive";
 import { Builder } from "@/content/home/builder";
 import { Board } from "@/content/home/board";
 import { Process } from "@/content/home/process";
-import { CtaBuild } from "@/content/home/cta-build";
 import { Join } from "@/content/home/join";
 import { HomeMotion } from "@/content/home/home-motion";
+import { Stage } from "@/content/home/stage";
 
 export default function Home() {
   return (
@@ -18,16 +18,19 @@ export default function Home() {
         <style>{`.noema-loader{display:none}body.is-loading{height:auto;overflow:auto}`}</style>
       </noscript>
       <Loader />
-      <main>
+      {/* one background, one grid, one 3D stage for the whole page */}
+      <div className="home-backdrop" id="homeBackdrop" aria-hidden="true"></div>
+      <Stage />
+      <div className="home-grid" id="homeGrid" aria-hidden="true"></div>
+      <main className="home-main">
         <Hero />
         <Interlude />
         <Product />
-        <Manifesto />
         <Archive />
+        <Manifesto />
         <Builder />
         <Board />
         <Process />
-        <CtaBuild />
         <Join />
       </main>
       <HomeMotion />

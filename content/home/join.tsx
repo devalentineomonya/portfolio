@@ -1,87 +1,40 @@
-import Image from "next/image";
 import { heroContent } from "@/data/hero";
-import { getProject } from "@/data/work";
 import { SiteFooter } from "@/components/layout/site-footer";
-
-const members: Array<{
-  project: string;
-  className: string;
-}> = [
-  {
-    project: "Nine Hertz",
-    className:
-      "w-12 h-12 md:w-16 md:h-16 left-[14%] top-[28%]",
-  },
-  {
-    project: "Journaling",
-    className: "w-10 h-10 md:w-14 md:h-14 left-[30%] top-[68%]",
-  },
-  {
-    project: "Tekobliss",
-    className: "w-12 h-12 md:w-16 md:h-16 left-[52%] top-[24%]",
-  },
-  {
-    project: "lazyDLP",
-    className: "w-10 h-10 md:w-14 md:h-14 left-[8%] top-[58%]",
-  },
-  {
-    project: "PBQ Simulator",
-    className: "w-12 h-12 md:w-16 md:h-16 left-[44%] top-[78%]",
-  },
-  {
-    project: "Arorwet Secondary",
-    className: "w-10 h-10 md:w-14 md:h-14 left-[24%] top-[12%]",
-  },
-];
+import { Kicker } from "./parts";
 
 export const Join = () => (
-  <section
-    className="poster-section min-h-screen w-full z-10 flex flex-col bg-lilac divider-grid dark-lines"
-    id="join"
-  >
-    <div className="relative flex-1 min-h-[88vh]">
-      <div className="absolute inset-0 flex items-center justify-center md:justify-start md:pl-[4vw] overflow-hidden z-0">
+  <section className="home-section text-white flex flex-col" id="join">
+    <Kicker index="08" label="Contact" />
+    <div className="relative flex-1 min-h-[88svh]">
+      {/* the ring comes back here, behind the word, to close the loop */}
+      <div className="absolute inset-0 flex items-center justify-center md:justify-start md:pl-[4vw] overflow-hidden">
         <h2
-          className="display text-black text-[44vw] md:text-[32vw] leading-none tracking-[-0.07em] select-none will-change-transform"
+          className="display text-[44vw] md:text-[30vw] leading-none tracking-[-0.07em] select-none will-change-transform"
           id="joinWord"
         >
           TALK
         </h2>
       </div>
       <span
-        className="hand absolute text-amber text-[15vw] md:text-[8vw] left-[28%] md:left-[36%] top-[45%] -rotate-12 select-none drop-shadow-lg z-10"
+        className="hand absolute text-amber text-[15vw] md:text-[8vw] left-[28%] md:left-[34%] top-[58%] md:top-[56%] -rotate-12 select-none drop-shadow-lg z-10"
         id="yourCardWord"
       >
         to me
       </span>
-      {members.map(({ project, className }) => {
-        const data = getProject(project);
-        return (
-          <Image
-            key={project}
-            alt=""
-            className={`member absolute rounded-full border-2 border-white object-cover object-top shadow-xl z-10 ${className}`}
-            src={data.mobileImage ?? ""}
-            width={120}
-            height={120}
-            sizes="64px"
-          />
-        );
-      })}
-      <div className="absolute right-5 md:right-[8vw] top-[23%] md:top-[31%] max-w-xs text-black z-20">
+      <div className="absolute left-5 right-5 bottom-8 md:left-auto md:bottom-auto md:right-[8vw] md:top-[31%] md:max-w-xs z-20">
         <p className="text-lg md:text-xl font-semibold leading-snug">
           Hiring, or building a team? Tell me about the role and I&apos;ll get
           back to you.
         </p>
         <a
-          className="mt-4 inline-block text-sm font-semibold underline underline-offset-4 hover:opacity-60 transition-opacity"
+          className="mt-4 inline-block text-sm font-semibold underline underline-offset-4 hover:text-amber transition-colors"
           href={heroContent.links.email}
         >
           {heroContent.links.emailAddress}
         </a>
         <p className="mt-3 text-sm">
           <a
-            className="font-semibold underline underline-offset-4 hover:opacity-60 transition-opacity"
+            className="font-semibold underline underline-offset-4 hover:text-amber transition-colors"
             href={heroContent.links.resume}
             target="_blank"
             rel="noopener noreferrer"
@@ -90,7 +43,7 @@ export const Join = () => (
           </a>
           {" · "}
           <a
-            className="font-semibold underline underline-offset-4 hover:opacity-60 transition-opacity"
+            className="font-semibold underline underline-offset-4 hover:text-amber transition-colors"
             href={heroContent.links.linkedin}
             target="_blank"
             rel="noopener noreferrer"
@@ -98,10 +51,10 @@ export const Join = () => (
             LinkedIn
           </a>
         </p>
-        <p className="mt-3 text-sm text-black/70">
+        <p className="mt-3 text-sm text-white/75">
           Need a website for your business?{" "}
           <a
-            className="font-semibold text-black underline underline-offset-4 hover:opacity-60 transition-opacity"
+            className="font-semibold text-white underline underline-offset-4 hover:text-amber transition-colors"
             href={heroContent.links.studio}
             target="_blank"
             rel="noopener noreferrer"
@@ -109,21 +62,8 @@ export const Join = () => (
             Devaltech builds them →
           </a>
         </p>
-        <svg
-          className="w-24 md:w-32 mt-6 ml-auto text-black"
-          fill="none"
-          id="handArrow"
-          stroke="currentColor"
-          strokeLinecap="round"
-          strokeWidth="2.5"
-          viewBox="0 0 120 90"
-          aria-hidden="true"
-        >
-          <path d="M8 10 C 40 20, 70 40, 100 72"></path>
-          <path d="M86 68 L 102 74 L 96 56"></path>
-        </svg>
       </div>
     </div>
-    <SiteFooter />
+    <SiteFooter tone="light" />
   </section>
 );

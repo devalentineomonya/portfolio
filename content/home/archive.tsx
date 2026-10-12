@@ -1,79 +1,84 @@
-import Image from "next/image";
-import { workProjects } from "@/data/work";
+import { getHost } from "@/data/work";
+import { ArrowUpRightIcon } from "@/components/ui/icons";
+import { Headline, Kicker } from "./parts";
+import { ringProjects } from "./scene";
 
-type Shot = { src: string; title: string; kind: "desktop" | "mobile"; url: string };
+const total = String(ringProjects.length).padStart(2, "0");
 
-/** 7 desktop + 8 mobile screens, interleaved. Index 7 is the hero cell. */
-const order: Array<[string, Shot["kind"]]> = [
-  ["PBQ Simulator", "mobile"],
-  ["Tekobliss", "desktop"],
-  ["Arorwet Secondary", "mobile"],
-  ["Journaling", "desktop"],
-  ["lazyDLP", "mobile"],
-  ["Studio", "mobile"],
-  ["University Computer Society", "desktop"],
-  ["Nine Hertz", "desktop"],
-  ["University Computer Society", "mobile"],
-  ["Tekobliss", "mobile"],
-  ["Journaling", "mobile"],
-  ["PBQ Simulator", "desktop"],
-  ["Arorwet Secondary", "desktop"],
-  ["Nine Hertz", "mobile"],
-  ["lazyDLP", "desktop"],
-];
-
-const shots: Shot[] = order.map(([title, kind]) => {
-  const project = workProjects.find((p) => p.title === title);
-  const src = kind === "desktop" ? project?.image : project?.mobileImage;
-  if (!project || !src) throw new Error(`Missing ${kind} screenshot: ${title}`);
-  return { src, title, kind, url: project.url };
-});
-
+/**
+ * The screens themselves are the 3D ring (stage.tsx); scrolling turns it one
+ * project at a time. This layer names the project in front and lists them all.
+ */
 export const Archive = () => (
-  <section
-    className="poster-section h-screen bg-ink divider-grid flex items-center justify-center px-5"
-    id="archive"
-  >
-    <h2
-      className="huge-word absolute z-0 text-white/10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
-      id="archiveWord"
-    >
-      MY WORK
-    </h2>
-    <div className="archive-grid">
-      {shots.map((shot, index) => (
-        <a
-          key={`${shot.title}-${shot.kind}`}
-          className="archive-img group"
-          href={shot.url}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label={`${shot.title} (${shot.kind} preview)`}
+  <section className="home-section h-svh text-white" id="archive">
+    <Kicker index="03" label="Selected work" />
+    <Headline
+      text="MY WORK"
+      className="absolute left-5 md:left-8 top-32 md:top-36 text-[19vw] md:text-[8.5vw]"
+    />
+
+    <div className="work-stack absolute left-5 right-5 bottom-24 md:right-auto md:left-8 md:bottom-10 md:w-[25rem]">
+      {ringProjects.map((project, index) => (
+        <article
+          className="work-item"
+          data-work-item={index}
+          data-active={index === 0 ? "true" : "false"}
+          key={project.title}
         >
-          <Image
-            alt=""
-            className="object-cover object-top"
-            src={shot.src}
-            fill
-            sizes="(max-width: 768px) 30vw, 216px"
-            loading="eager"
-            priority={index === 7}
-          />
-          <span className="absolute inset-x-0 bottom-0 bg-black/80 px-2 py-1.5 text-[0.62rem] font-semibold uppercase tracking-[0.12em] text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-focus-visible:opacity-100">
-            {shot.title}
-          </span>
-        </a>
+          <p className="text-xs uppercase tracking-[0.18em] text-white/55">
+            {String(index + 1).padStart(2, "0")} / {total} · {project.category}{" "}
+            · {project.status}
+          </p>
+          <h3 className="display text-4xl md:text-5xl leading-none tracking-tight mt-3">
+            {project.title}
+          </h3>
+          <p className="mt-3 text-sm md:text-base text-white/75 leading-snug line-clamp-3">
+            {project.description}
+          </p>
+          <div className="mt-4 flex flex-wrap items-center gap-2">
+            {project.technologies.map((tech) => (
+              <span
+                className="border border-white/25 px-2 py-1 text-[0.65rem] uppercase tracking-[0.14em] text-white/70"
+                key={tech}
+              >
+                {tech}
+              </span>
+            ))}
+            <a
+              className="ml-auto flex items-center gap-1.5 bg-white text-black text-xs font-semibold rounded-full pl-3.5 pr-2.5 py-1.5 hover:bg-amber transition-colors"
+              href={project.url}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Visit {getHost(project.url)}
+              <ArrowUpRightIcon className="w-3.5 h-3.5" />
+            </a>
+          </div>
+        </article>
       ))}
     </div>
-    <div className="absolute bottom-0 left-0 right-0 border-t border-white/25 z-10">
-      <div className="px-5 md:px-8 py-5 flex items-end justify-between text-white">
-        <p className="text-base font-semibold max-w-sm leading-snug">
-          Eight projects: clinics, schools, money, exam prep and more. Tap any screen to visit the site.
-        </p>
-        <p className="text-xs text-white/55 hidden sm:block">
-          15 screens
-        </p>
-      </div>
-    </div>
+
+    <ol
+      className="work-index hidden md:block absolute right-8 top-1/2 -translate-y-1/2 w-56"
+      aria-label="All projects"
+    >
+      {ringProjects.map((project, index) => (
+        <li key={project.title}>
+          <a
+            className="work-index-row"
+            data-work-row={index}
+            data-active={index === 0 ? "true" : "false"}
+            href={project.url}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span className="text-[0.65rem] tabular-nums">
+              {String(index + 1).padStart(2, "0")}
+            </span>
+            <span>{project.title}</span>
+          </a>
+        </li>
+      ))}
+    </ol>
   </section>
 );

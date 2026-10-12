@@ -40,6 +40,152 @@
     background: var(--color-ink);
     color: var(--color-amber);
   }
+  /* Lenis drives the home page scroll; native smooth scroll would fight it. */
+  html.lenis,
+  html.lenis body {
+    height: auto;
+  }
+  .lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+  }
+}
+
+/*
+ * Home page scene: one fixed background, one fixed WebGL stage and one fixed
+ * grid sit behind every section. Sections are transparent; home-motion blends
+ * the background and line colours as you scroll, so there are no hard seams.
+ */
+@layer components {
+  .home-backdrop,
+  .home-grid,
+  .home-stage {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100lvh;
+    pointer-events: none;
+    z-index: 0;
+  }
+  .home-backdrop {
+    background: var(--color-violet);
+  }
+  .home-grid {
+    color: #ffffff;
+    opacity: 0.16;
+    background-image:
+      linear-gradient(to right, currentColor 1px, transparent 1px),
+      linear-gradient(to bottom, currentColor 1px, transparent 1px);
+    background-size:
+      20vw 100%,
+      100% 25vh;
+  }
+  .home-main {
+    position: relative;
+    z-index: 1;
+  }
+  .home-section {
+    position: relative;
+    width: 100%;
+    min-height: 100svh;
+    overflow: hidden;
+  }
+  /* content block of a free-scrolling section, below the kicker */
+  .section-body {
+    position: relative;
+    min-height: 100svh;
+    padding: 9rem 1.25rem 6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .section-body.grid {
+    display: grid;
+  }
+  .kicker {
+    position: absolute;
+    top: 5.75rem;
+    left: 1.25rem;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    opacity: 0.72;
+  }
+  .kicker-rule {
+    width: 2.5rem;
+    height: 1px;
+    background: currentColor;
+  }
+  .headline {
+    font-family: var(--font-anton), "Anton", sans-serif;
+    font-weight: 400;
+    line-height: 0.8;
+    letter-spacing: -0.05em;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+  .headline-line {
+    display: block;
+    overflow: hidden;
+    /* room for the descender-less Anton baseline inside the mask */
+    padding: 0.06em 0.04em 0.02em 0;
+  }
+  .headline-char {
+    display: inline-block;
+    will-change: transform;
+  }
+  .work-stack {
+    display: grid;
+    z-index: 10;
+  }
+  .work-item {
+    grid-area: 1 / 1;
+    transition:
+      opacity 0.45s ease,
+      transform 0.45s ease,
+      visibility 0.45s;
+  }
+  .work-item[data-active="false"] {
+    opacity: 0;
+    transform: translateY(14px);
+    visibility: hidden;
+  }
+  .work-index-row {
+    display: flex;
+    align-items: baseline;
+    gap: 0.9rem;
+    padding: 0.55rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.14);
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.45);
+    transition:
+      color 0.35s ease,
+      padding 0.35s ease;
+  }
+  .work-index-row:hover,
+  .work-index-row[data-active="true"] {
+    color: #ffffff;
+  }
+  .work-index-row[data-active="true"] {
+    padding-left: 0.6rem;
+    box-shadow: inset 2px 0 0 var(--color-amber);
+  }
+  [data-tilt] {
+    transform-style: preserve-3d;
+  }
+  @media (min-width: 768px) {
+    .kicker {
+      left: 2rem;
+    }
+    .section-body {
+      padding: 9rem 2rem 6rem;
+    }
+  }
 }
 
 /*
@@ -90,35 +236,6 @@
     white-space: nowrap;
     user-select: none;
   }
-  .profile-card {
-    background: var(--color-ink);
-    color: white;
-    border: 1px solid rgba(255, 255, 255, 0.16);
-    box-shadow: 32px 48px 80px rgba(0, 0, 0, 0.45);
-  }
-  .soft-sheen::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    background: linear-gradient(
-      115deg,
-      rgba(255, 255, 255, 0.18),
-      transparent 34%,
-      rgba(0, 0, 0, 0.32)
-    );
-    mix-blend-mode: screen;
-  }
-  .section-label {
-    position: absolute;
-    left: 1.25rem;
-    bottom: 1.25rem;
-    z-index: 10;
-    font-size: 0.72rem;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    font-weight: 700;
-  }
   .manifesto-sentence {
     max-width: min(1180px, 92vw);
     display: flex;
@@ -138,30 +255,6 @@
     line-height: 0.9;
     letter-spacing: -0.045em;
     text-transform: uppercase;
-  }
-  .archive-grid {
-    position: relative;
-    z-index: 5;
-    width: min(88vw, 1120px);
-    display: grid;
-    grid-template-columns: repeat(5, minmax(0, 1fr));
-    gap: 10px;
-    will-change: transform;
-  }
-  .archive-img {
-    position: relative;
-    display: block;
-    overflow: hidden;
-    width: 100%;
-    aspect-ratio: 4 / 5;
-    filter: grayscale(1) contrast(1.08) saturate(0.4);
-    transform-origin: center center;
-    will-change: transform, opacity;
-    transition: filter 0.4s ease;
-  }
-  .archive-img:hover,
-  .archive-img:focus-visible {
-    filter: none;
   }
   .builder-shell {
     width: min(470px, 88vw);
@@ -201,25 +294,12 @@
     will-change: transform, opacity;
   }
   .support-panel {
-    border: 1px solid rgba(255, 255, 255, 0.28);
-    background: var(--color-ink);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(8px);
     color: white;
     min-height: 310px;
     padding: 1.25rem;
-    will-change: transform, opacity;
-  }
-  .sweep-word {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: var(--font-anton), "Anton", sans-serif;
-    font-size: clamp(6.8rem, 26vw, 25rem);
-    line-height: 0.78;
-    letter-spacing: -0.055em;
-    white-space: nowrap;
-    opacity: 0;
     will-change: transform, opacity;
   }
 
@@ -377,41 +457,11 @@
       font-size: clamp(5.5rem, 37vw, 14rem);
       letter-spacing: -0.065em;
     }
-    .archive-grid {
-      width: 92vw;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 6px;
-    }
     .builder-shell {
       min-height: auto;
     }
-    .section-label {
-      left: 1rem;
-      bottom: 1rem;
-    }
     .poster-section {
       min-height: 100svh;
-    }
-  }
-  /* Short phone screens: shrink the hero cards and trim the list so nothing collides. */
-  @media (max-width: 767px) and (max-height: 700px) {
-    #card1,
-    #card2,
-    #card3 {
-      zoom: 0.72;
-    }
-    #heroAbout li:nth-child(3) {
-      display: none !important;
-    }
-    #heroCards {
-      translate: 0 -2vh;
-    }
-  }
-  @media (max-width: 767px) and (max-height: 600px) {
-    #card1,
-    #card2,
-    #card3 {
-      zoom: 0.6;
     }
   }
   @media (min-width: 768px) {
