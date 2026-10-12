@@ -27,8 +27,12 @@ const icons: Record<
 
 const isExternal = (href: string) => href.startsWith("http");
 
-export const SiteFooter = () => (
-  <footer className="relative border-t border-black/25 z-20 text-black">
+export const SiteFooter = ({ tone = "dark" }: { tone?: "dark" | "light" }) => (
+  <footer
+    className={`relative border-t z-20 ${
+      tone === "light" ? "border-white/30 text-white" : "border-black/25 text-black"
+    }`}
+  >
     <div className="px-5 md:px-8 py-6 grid grid-cols-1 md:grid-cols-3 gap-6">
       <div>
         <p className="text-sm font-semibold">
