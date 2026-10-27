@@ -1,36 +1,36 @@
-import { Loader } from "@/content/home/loader";
-import { Hero } from "@/content/home/hero";
-import { Interlude } from "@/content/home/interlude";
-import { Product } from "@/content/home/product";
-import { Manifesto } from "@/content/home/manifesto";
-import { Archive } from "@/content/home/archive";
-import { Builder } from "@/content/home/builder";
-import { Board } from "@/content/home/board";
-import { Process } from "@/content/home/process";
-import { CtaBuild } from "@/content/home/cta-build";
-import { Join } from "@/content/home/join";
-import { HomeMotion } from "@/content/home/home-motion";
+import { Intro } from "@/components/home/intro";
+import { Hero } from "@/components/home/hero";
+import { Manifesto } from "@/components/home/manifesto";
+import { Services } from "@/components/home/services";
+import { Work } from "@/components/home/work";
+import { Trail } from "@/components/home/trail";
+import { Process } from "@/components/home/process";
+import { Experience } from "@/components/home/experience";
+import { Cta } from "@/components/home/cta";
+import { RunPath } from "@/components/home/run-path";
 
 export default function Home() {
   return (
     <>
       <noscript>
-        <style>{`.noema-loader{display:none}body.is-loading{height:auto;overflow:auto}`}</style>
+        <style>{`.site-loader{display:none}`}</style>
       </noscript>
-      <Loader />
+      <Intro />
       <main>
-        <Hero />
-        <Interlude />
-        <Product />
-        <Manifesto />
-        <Archive />
-        <Builder />
-        <Board />
+        <div className="site-cover">
+          <Hero />
+          <Manifesto />
+        </div>
+        <div className="site-run">
+          <RunPath />
+          <Services />
+          <Work />
+          <Trail />
+        </div>
         <Process />
-        <CtaBuild />
-        <Join />
+        <Experience />
+        <Cta />
       </main>
-      <HomeMotion />
     </>
   );
 }
