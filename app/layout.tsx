@@ -1,27 +1,29 @@
 import type { Metadata } from "next";
-import { Anton, Caveat, Inter } from "next/font/google";
-import "./globals.css";
+import { Bricolage_Grotesque, Caveat_Brush, DM_Mono } from "next/font/google";
+import { Footer } from "@/components/layout/footer";
+import { PageCurtain } from "@/components/layout/page-curtain";
 import { SiteNav } from "@/components/layout/site-nav";
-import { CreateCta } from "@/components/layout/create-cta";
+import { SmoothScroll } from "@/components/layout/smooth-scroll";
+import "./globals.css";
 
-const inter = Inter({
-  variable: "--font-inter",
+const bricolage = Bricolage_Grotesque({
+  variable: "--font-bricolage",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "600", "800"],
   display: "swap",
 });
 
-const anton = Anton({
-  variable: "--font-anton",
+const caveatBrush = Caveat_Brush({
+  variable: "--font-caveat-brush",
   subsets: ["latin"],
   weight: "400",
   display: "swap",
 });
 
-const caveat = Caveat({
-  variable: "--font-caveat",
+const dmMono = DM_Mono({
+  variable: "--font-dm-mono",
   subsets: ["latin"],
-  weight: ["600", "700"],
+  weight: ["400", "500"],
   display: "swap",
 });
 
@@ -68,14 +70,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${inter.variable} ${anton.variable} ${caveat.variable}`}
-    >
-      <body className="bg-ink antialiased overflow-x-hidden">
-        <SiteNav />
-        {children}
-        <CreateCta />
+    <html lang="en" className={`${bricolage.variable} ${caveatBrush.variable} ${dmMono.variable}`}>
+      <body>
+        <div className="site">
+          <SmoothScroll />
+          {children}
+          <Footer />
+          <SiteNav />
+          <PageCurtain />
+        </div>
       </body>
     </html>
   );
