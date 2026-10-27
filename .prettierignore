@@ -1,0 +1,6 @@
+.next
+node_modules
+public
+bun.lock
+next-env.d.ts
+*.mp4
