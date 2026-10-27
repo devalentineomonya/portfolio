@@ -25,13 +25,7 @@ export const experiences: Experience[] = [
         isCurrent: true,
         description:
           "I build custom websites and tools for business clients using PHP, CodeIgniter and WordPress, so their day-to-day work runs more smoothly.",
-        technologies: [
-          "php",
-          "codeigniter",
-          "wordpress",
-          "mysql",
-          "javascript",
-        ],
+        technologies: ["php", "codeigniter", "wordpress", "mysql", "javascript"],
       },
     ],
   },
@@ -68,14 +62,7 @@ export const experiences: Experience[] = [
         dateRange: "May 2025 - Jul 2025",
         description:
           "I worked on real projects with React and NestJS, learned Docker and Azure DevOps for automated releases, and got better at leading, teamwork and writing things down clearly.",
-        technologies: [
-          "react",
-          "nestjs",
-          "docker",
-          "typescript",
-          "git",
-          "github",
-        ],
+        technologies: ["react", "nestjs", "docker", "typescript", "git", "github"],
       },
     ],
   },

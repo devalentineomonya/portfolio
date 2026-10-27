@@ -29,12 +29,12 @@ export const workProjects: WorkProject[] = [
     featured: true,
   },
   {
-    title: "Studio",
+    title: "Devaltech",
     category: "Brand",
     description:
-      "Devaltech, my web studio for businesses. Client work, case studies and prices live here.",
-    image: "/work/studio-desktop.webp",
-    mobileImage: "/work/studio-mobile.webp",
+      "Devaltech, my software company for Kenyan businesses. POS, ERP and custom systems with M-Pesa, eTIMS receipts and AI reports built in, plus the websites that bring customers.",
+    image: "/work/devaltech-desktop.webp",
+    mobileImage: "/work/devaltech-mobile.webp",
     url: "https://www.devaltech.co.ke",
     technologies: ["next.js", "react"],
   },
@@ -84,11 +84,20 @@ export const workProjects: WorkProject[] = [
     title: "PBQ Simulator",
     category: "Client",
     description:
-      "A practice tool that lets students try hands-on IT exam questions before the real test.",
+      "A practice tool that lets students try hands-on IT exam questions before the real test. I run it on a VPS with Docker Compose, deployed by Kamal through an automated CI/CD pipeline, with monitoring on top.",
     image: "/work/pbq-simulator-desktop.webp",
     mobileImage: "/work/pbq-simulator-mobile.webp",
     url: "https://pbqsimulator.com/",
-    technologies: ["react", "nestjs"],
+    technologies: [
+      "react",
+      "nestjs",
+      "docker",
+      "docker compose",
+      "kamal",
+      "vps",
+      "ci/cd",
+      "monitoring",
+    ],
   },
   {
     title: "Arorwet Secondary",
@@ -141,5 +150,4 @@ export const getProject = (title: string): WorkProject => {
   return project;
 };
 
-export const getHost = (url: string) =>
-  new URL(url).hostname.replace(/^www\./, "");
+export const getHost = (url: string) => new URL(url).hostname.replace(/^www\./, "");
