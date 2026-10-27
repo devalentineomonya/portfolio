@@ -1,36 +1,46 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Valentine Omonya — portfolio
 
-## Getting Started
+Personal portfolio for Valentine Omonya, a software engineer in Nairobi. Built with Next.js (App Router), React, GSAP, Lenis and Matter.js.
 
-First, run the development server:
+## Getting started
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+bun install
+bun run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Script                 | What it does                                  |
+| ---------------------- | --------------------------------------------- |
+| `bun run dev`          | Start the dev server                          |
+| `bun run build`        | Production build                              |
+| `bun run lint`         | ESLint                                        |
+| `bun run typecheck`    | TypeScript, no emit                           |
+| `bun run format`       | Prettier, write (needs prettier on your PATH) |
+| `bun run format:check` | Prettier, check only                          |
 
-## Learn More
+## Structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+app/                 routes: / , /work, /experience, /stories, 404, sitemap, global styles
+components/
+  home/              sections of the home page (hero, manifesto, services, work, process, ...)
+  pages/             client components for /work, /experience, /stories and the 404 scene
+  layout/            nav, footer, page curtain, smooth scroll, back to top
+  ui/                shared bits: Brace the mascot, icons
+data/                hero copy, work projects, experience, stories
+public/              avatar and project screenshots
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+All styles live in `app/globals.css`, scoped under `.site` with a `site-` class prefix.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Content
 
-## Deploy on Vercel
+Edit the files in `data/` to change copy, projects, roles and stories. Project screenshots go in `public/work/`.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Previous versions
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Older designs are kept as branches: `v1.0` to `v7.0`.
