@@ -60,8 +60,8 @@ export const Cta = () => (
           </a>
         </li>
         <li>
-          <a href={links.resume} target="_blank" rel="noreferrer">
-            Resume
+          <a href={links.studio} target="_blank" rel="noreferrer">
+            Studio
           </a>
         </li>
       </ul>

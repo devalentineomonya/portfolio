@@ -7,7 +7,7 @@ import { heroContent } from "@/data/hero";
 const LINKS = [
   { label: "Home", href: "/" },
   { label: "Work", href: "/work" },
-  { label: "Experience", href: "/experience" },
+  { label: "Track Record", href: "/experience" },
   { label: "Stories", href: "/stories" },
   { label: "Contact", href: heroContent.links.email },
 ];

@@ -4,19 +4,19 @@ import { NairobiClock } from "@/components/home/nairobi-clock";
 
 const { links, profile } = heroContent;
 
-const SIGN_OFF = ["Full-time, remote or local", "Based in Nairobi", "Say hello"];
+const SIGN_OFF = ["Taking on projects", "Available worldwide", "Let's build"];
 
 const PAGES = [
   { label: "Work", href: "/work" },
-  { label: "Experience", href: "/experience" },
+  { label: "Track Record", href: "/experience" },
   { label: "Stories", href: "/stories" },
 ];
 
 const ELSEWHERE = [
   { label: links.emailAddress, href: links.email },
+  { label: "Studio", href: links.studio },
   { label: "LinkedIn", href: links.linkedin },
   { label: "GitHub", href: links.github },
-  { label: "Resume", href: links.resume },
 ];
 
 export const Footer = () => (

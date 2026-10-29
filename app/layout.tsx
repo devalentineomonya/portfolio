@@ -1,9 +1,12 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Bricolage_Grotesque, Caveat_Brush, DM_Mono } from "next/font/google";
 import { Footer } from "@/components/layout/footer";
 import { PageCurtain } from "@/components/layout/page-curtain";
 import { SiteNav } from "@/components/layout/site-nav";
 import { SmoothScroll } from "@/components/layout/smooth-scroll";
+import { JsonLd } from "@/components/site/json-ld";
+import { SITE } from "@/config/site";
+import { personSchema, websiteSchema } from "@/lib/schema";
 import "./globals.css";
 
 const bricolage = Bricolage_Grotesque({
@@ -28,40 +31,78 @@ const dmMono = DM_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE.url),
   title: {
-    default: "Valentine Omonya | Software Engineer",
+    default: "Valentine Omonya | Freelance Full-Stack Engineer · E-Commerce, Next.js & NestJS",
     template: "%s | Valentine Omonya",
   },
-  description:
-    "Valentine Omonya is a software engineer in Nairobi, Kenya. He builds web and mobile products with React, Next.js and NestJS, and is open to full-time roles.",
+  description: SITE.description,
   keywords: [
     "Valentine Omonya",
-    "Software Engineer",
-    "Full Stack Developer",
+    "Freelance Software Engineer",
+    "E-Commerce Developer",
+    "Payment Gateway Integration",
+    "M-Pesa Integration",
+    "Stripe Integration Kenya",
+    "Next.js Developer",
+    "NestJS Developer",
+    "Full Stack Freelancer",
+    "Nairobi",
     "Kenya",
+    "POS Systems",
+    "ERP Software",
+    "CRM Systems",
+    "Technical SEO",
+    "High Converting Websites",
+    "Online Stores",
     "React",
-    "Next.js",
-    "NestJS",
-    "Portfolio",
+    "TypeScript",
   ],
-  authors: [{ name: "Valentine Omonya" }],
-  creator: "Valentine Omonya",
+  authors: [{ name: SITE.name, url: SITE.url }],
+  creator: SITE.name,
+  publisher: SITE.name,
+  category: "technology",
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://devalentine.com",
-    title: "Valentine Omonya | Software Engineer",
-    description:
-      "Valentine Omonya is a software engineer in Nairobi, Kenya who builds web and mobile products. Open to full-time roles.",
-    siteName: "Valentine Omonya Portfolio",
+    url: SITE.url,
+    siteName: `${SITE.name} — Freelance Full-Stack Engineer`,
+    title: {
+      default: "Valentine Omonya | Freelance Full-Stack Engineer · E-Commerce, Next.js & NestJS",
+      template: "%s | Valentine Omonya",
+    },
+    description: SITE.description,
   },
   twitter: {
     card: "summary_large_image",
-    title: "Valentine Omonya | Software Engineer",
-    description:
-      "Valentine Omonya is a software engineer in Nairobi, Kenya who builds web and mobile products. Open to full-time roles.",
-    creator: "@devalentine_",
+    title: "Valentine Omonya | Freelance Full-Stack Engineer · E-Commerce, Next.js & NestJS",
+    description: SITE.description,
+    creator: SITE.twitter,
+    site: SITE.twitter,
   },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  icons: {
+    icon: [{ url: "/favicon.ico" }, { url: "/icon.png", type: "image/png", sizes: "512x512" }],
+    apple: [{ url: "/apple-icon.png", sizes: "180x180" }],
+  },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#f2efe6",
+  colorScheme: "light",
 };
 
 export default function RootLayout({
@@ -72,6 +113,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${bricolage.variable} ${caveatBrush.variable} ${dmMono.variable}`}>
       <body>
+        <JsonLd schema={[personSchema(), websiteSchema()]} />
         <div className="site">
           <SmoothScroll />
           {children}

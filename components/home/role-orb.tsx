@@ -6,7 +6,7 @@ import { heroContent } from "@/data/hero";
 
 const STATES: OrbState[] = ["searching", "connecting", "weaving", "working"];
 
-/** Top-centre availability pill: an orb that keeps changing shape beside the label. */
+/** Top-centre availability pill: an orb that keeps changing shape beside the status. */
 export const RoleOrb = () => {
   const [index, setIndex] = useState(0);
   const [size, setSize] = useState<OrbSize>(64);
@@ -35,7 +35,7 @@ export const RoleOrb = () => {
         color="#151515"
         aria-hidden="true"
       />
-      <span>Looking for a role</span>
+      <span>Taking on projects</span>
     </a>
   );
 };

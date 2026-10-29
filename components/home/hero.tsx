@@ -30,24 +30,25 @@ export const Hero = () => (
     <div className="site-bottom">
       <div className="site-intro" data-hero="fade">
         <div className="site-sign">
-          <span className="site-hand">software engineer</span>
+          <span className="site-hand">freelance engineer</span>
           <Eyes className="site-sign__eyes" />
         </div>
         <p className="site-copy">{heroContent.copy}</p>
         <div className="site-actions">
           <a className="site-btn site-btn--solid" href="/work">
-            See my work
+            See client work
             <ArrowUpRightIcon className="site-btn__icon" strokeWidth={2} />
           </a>
           <a className="site-btn" href={heroContent.links.email}>
-            Say hello
+            Start a project
           </a>
         </div>
       </div>
 
       <div className="site-panel" data-hero="panel">
         <p className="site-panel__title" data-hero="fade">
-          Open for a full-time role, remote or local, in any of these fields.
+          Taking on new projects · E-commerce, websites, payment integrations &amp; business
+          systems.
         </p>
 
         <div className="site-panel__brace" data-hero-brace="">

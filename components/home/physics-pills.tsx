@@ -6,14 +6,14 @@ import Matter from "matter-js";
 import { usePhysicsBlocks } from "@/components/home/use-physics-blocks";
 
 const PILLS = [
-  { label: "Front end", tone: "butter", shape: "round" },
-  { label: "Back end", tone: "mint", shape: "block" },
-  { label: "DevOps", tone: "lilac", shape: "tab" },
-  { label: "React", tone: "tangerine", shape: "round" },
   { label: "Next.js", tone: "chalk", shape: "block" },
   { label: "NestJS", tone: "mint", shape: "tab" },
-  { label: "React Native", tone: "butter", shape: "block" },
-  { label: "Docker", tone: "lilac", shape: "round" },
+  { label: "E-Commerce", tone: "butter", shape: "round" },
+  { label: "Payment APIs", tone: "tangerine", shape: "round" },
+  { label: "POS & ERP", tone: "lilac", shape: "tab" },
+  { label: "M-Pesa & Stripe", tone: "mint", shape: "block" },
+  { label: "Speed & SEO", tone: "butter", shape: "block" },
+  { label: "Conversions", tone: "lilac", shape: "round" },
 ] as const;
 
 /** Brace is plain SVG, so give the physics a hidden block where its head is. */

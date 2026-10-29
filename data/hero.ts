@@ -1,21 +1,38 @@
 export const heroContent = {
   brand: "devalentine.",
-  tagline: "Software engineer · Nairobi",
+  tagline: "Freelance engineer · E-Commerce, Payments, Next.js & NestJS",
   word: "VALENTINE",
-  copy: "I'm a software engineer. I build web and mobile products that look sharp, turn visitors into paying customers and stay up.",
+  copy: "I build beautiful, high-converting e-commerce stores, high-speed Next.js websites, and robust NestJS business systems (POS, ERP, CRM) with seamless payment integrations (M-Pesa, Stripe, cards). Optimized for speed, search visibility, and checkout conversion — taking products from raw idea to first paying customer.",
   examples:
-    "Recently: a healthcare app, an M-Pesa budgeting app and a campus tech community's platform.",
-  status: "Open to full-time roles. Based in Nairobi.",
+    "Recent work: online store checkouts, clinic POS systems, automated M-Pesa cashflow tracking, and high-visibility corporate websites.",
+  status: "Taking on new projects · Freelance & contracts worldwide",
   services: [
-    { title: "Front end", detail: "React, Next.js, React Native" },
-    { title: "Back end", detail: "NestJS, PHP, MySQL" },
-    { title: "DevOps", detail: "Docker, CI/CD, Linux servers" },
+    {
+      title: "E-Commerce & High-Converting Websites",
+      detail:
+        "Fast Next.js storefronts, technical SEO, and sub-second speed that attract traffic, reduce bounce rates, and turn visitors into buyers.",
+    },
+    {
+      title: "Payment Integrations & Gateways",
+      detail:
+        "Frictionless checkout experiences with M-Pesa (STK Push, Daraja API), Stripe, card payments, automated receipts, and multi-currency billing.",
+    },
+    {
+      title: "Business Systems (POS, ERP, CRM)",
+      detail:
+        "NestJS APIs, inventory management, customer records, and operations software that keeps your business running smoothly.",
+    },
+    {
+      title: "Idea to First Paying Customer",
+      detail:
+        "End-to-end product delivery: store architecture, payment flows, customer onboarding, and reliable cloud deployment.",
+    },
   ],
   story:
-    "I'm Valentine, a software engineer in Nairobi. I'm obsessed with products that look good, win paying customers and stay online. I've built clinic apps, M-Pesa budgeting and a campus platform where active users grew 40%. I lead small teams and I ship.",
+    "I'm Valentine, a freelance full-stack engineer in Nairobi specializing in Next.js, NestJS, e-commerce, and payment integrations. I partner with founders and businesses to launch online stores and websites that rank high and convert, alongside custom business software (POS, ERP, CRM) and seamless payment gateways (M-Pesa, Stripe, cards) that automate cashflow and operations. No agency overhead — just fast code, reliable payment flows, and direct revenue growth.",
   profile: {
     name: "Valentine Omonya",
-    role: "Software Engineer",
+    role: "Freelance Full-Stack Engineer",
     location: "Nairobi",
     image: "/avatar.webp",
   },
@@ -24,7 +41,6 @@ export const heroContent = {
     emailAddress: "contact@devalentine.com",
     github: "https://github.com/devalentineomonya",
     linkedin: "https://linkedin.com/in/devalentineomonya",
-    resume: "https://v1.devalentine.com/resume.pdf",
     studio: "https://www.devaltech.co.ke",
   },
 };

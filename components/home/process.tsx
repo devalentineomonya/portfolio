@@ -13,9 +13,9 @@ const branches = [
     x: 240,
     y: 450,
     leaves: [
-      { text: "Talk to users", dx: -130, y: 720 },
-      { text: "Pick the stack", dx: 130, y: 720 },
-      { text: "Design that converts", dx: 0, y: 860 },
+      { text: "Understand your business", dx: -130, y: 720 },
+      { text: "Next.js & NestJS stack", dx: 130, y: 720 },
+      { text: "High-converting store UX", dx: 0, y: 860 },
     ],
   },
   {
@@ -25,21 +25,21 @@ const branches = [
     x: 720,
     y: 520,
     leaves: [
-      { text: "Polish every pixel", dx: -130, y: 740 },
-      { text: "Tests that matter", dx: 130, y: 740 },
-      { text: "Demo every week", dx: 0, y: 870 },
+      { text: "Fast checkout & SEO", dx: -130, y: 740 },
+      { text: "POS, ERP & APIs", dx: 130, y: 740 },
+      { text: "M-Pesa & Stripe gateways", dx: 0, y: 870 },
     ],
   },
   {
     num: "03",
-    title: "Ship",
+    title: "Launch",
     tone: "tangerine",
     x: 1200,
     y: 450,
     leaves: [
-      { text: "Docker + CI/CD", dx: -130, y: 720 },
-      { text: "Minimal downtime", dx: 130, y: 720 },
-      { text: "Fix fast", dx: 0, y: 860 },
+      { text: "Docker & Cloud deploy", dx: -130, y: 720 },
+      { text: "First paying customer", dx: 130, y: 720 },
+      { text: "Ongoing scale & support", dx: 0, y: 860 },
     ],
   },
 ] as const;
@@ -59,8 +59,8 @@ export const Process = () => (
   <section className="site-process" id="process">
     <div className="site-process__map" data-map="">
       <div className="site-process__head">
-        <span className="site-process__label">How I work</span>
-        <h2 className="site-process__headline">Plan it. Build it. Ship it.</h2>
+        <span className="site-process__label">How we work</span>
+        <h2 className="site-process__headline">From raw idea to paying customers.</h2>
       </div>
 
       <svg className="site-process__svg" viewBox={`0 0 ${W} ${H}`} aria-hidden="true">
@@ -87,7 +87,7 @@ export const Process = () => (
 
       <div className="site-process__pos" style={at(HUB.x, HUB.y)}>
         <span className="site-process__hub" data-hub="">
-          Your idea
+          Your product
         </span>
       </div>
 

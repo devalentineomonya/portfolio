@@ -8,11 +8,11 @@ import { usePhysicsBlocks } from "@/components/home/use-physics-blocks";
 gsap.registerPlugin(ScrollTrigger);
 
 const SERVICES = [
-  { label: "Front end", tone: "tangerine" },
-  { label: "Mobile apps", tone: "butter" },
-  { label: "Back end", tone: "forest" },
-  { label: "DevOps", tone: "lilac" },
-  { label: "Team lead", tone: "mint" },
+  { label: "E-Commerce Stores", tone: "tangerine" },
+  { label: "Payment Integrations", tone: "butter" },
+  { label: "High-speed Next.js", tone: "forest" },
+  { label: "POS, ERP & CRM", tone: "lilac" },
+  { label: "Idea to paying user", tone: "mint" },
 ] as const;
 
 /** The services as big blocks that drop into a box when it scrolls in and pile into a stack. */

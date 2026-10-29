@@ -117,10 +117,10 @@ export const WorkIndex = () => {
     <div className="site-wi" ref={root}>
       <header className="site-wi__head" data-head="">
         <span className="site-wi__label">Work</span>
-        <h1 className="site-wi__headline">Things I&rsquo;ve built.</h1>
+        <h1 className="site-wi__headline">Client work &amp; systems.</h1>
         <p className="site-wi__lede">
-          Sites and apps for clinics, schools, businesses and everyday people. {projects.length}{" "}
-          live right now.
+          High-performance Next.js websites, e-commerce stores, clinic platforms and custom business
+          systems. Engineered for speed, payment integrations and customer conversions.
         </p>
       </header>
 

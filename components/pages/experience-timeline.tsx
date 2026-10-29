@@ -50,17 +50,21 @@ export const ExperienceTimeline = () => {
         gsap.from(dot, {
           scale: 0,
           duration: 0.5,
-          ease: "back.out(2.4)",
-          scrollTrigger: { trigger: stop, start: "top 75%", toggleActions: "play none none none" },
+          ease: "back.out(2)",
+          scrollTrigger: { trigger: stop, start: "top 82%", toggleActions: "play none none none" },
         });
 
         if (line) {
-          // The spine runs from this stop's dot down to the next one, drawn as you scroll.
           gsap.from(line, {
             scaleY: 0,
-            ease: "none",
-            transformOrigin: "50% 0%",
-            scrollTrigger: { trigger: stop, start: "top 70%", end: "bottom 70%", scrub: 0.5 },
+            duration: 0.8,
+            ease: "power2.out",
+            transformOrigin: "top center",
+            scrollTrigger: {
+              trigger: stop,
+              start: "top 82%",
+              toggleActions: "play none none none",
+            },
           });
         }
       });
@@ -72,19 +76,14 @@ export const ExperienceTimeline = () => {
   return (
     <section className="site-tl" ref={root}>
       <header className="site-tl__head" data-head="">
-        <span className="site-tl__label">Career</span>
-        <h1 className="site-tl__headline">Where I&rsquo;ve worked.</h1>
+        <span className="site-tl__label">Track Record</span>
+        <h1 className="site-tl__headline">Proven systems & delivery.</h1>
         <p className="site-tl__lede">
-          Four teams, five roles. Real clients, real users, and a society that grew 40% while I led
-          its build.
+          Real clients, real businesses, and mission-critical software shipped to production.
+          Engineered for speed, visibility, and measurable revenue.
         </p>
-        <a
-          className="site-tl__resume"
-          href={heroContent.links.resume}
-          target="_blank"
-          rel="noreferrer"
-        >
-          Download resume <span aria-hidden="true">↓</span>
+        <a className="site-tl__resume" href={heroContent.links.email}>
+          Start a project <span aria-hidden="true">→</span>
         </a>
       </header>
 
@@ -97,7 +96,7 @@ export const ExperienceTimeline = () => {
           >
             <p className="site-stop__when" data-when="">
               <span>{role.dateRange}</span>
-              {role.isCurrent && <b>Now</b>}
+              {role.isCurrent && <b>Active</b>}
             </p>
 
             <div className="site-stop__rail" aria-hidden="true">
@@ -111,7 +110,7 @@ export const ExperienceTimeline = () => {
               <p className="site-stop__role">
                 {role.title} <span>{role.type}</span>
               </p>
-              <p className="site-stop__place">{location}</p>
+              <p className="site-stop__loc">{location}</p>
               <p className="site-stop__text">{role.description}</p>
               {role.technologies && (
                 <ul className="site-stop__tech">
@@ -124,13 +123,6 @@ export const ExperienceTimeline = () => {
           </li>
         ))}
       </ol>
-
-      <div className="site-tl__end">
-        <p>Next chapter&rsquo;s open.</p>
-        <a href={heroContent.links.email}>
-          Say hello <span aria-hidden="true">→</span>
-        </a>
-      </div>
     </section>
   );
 };

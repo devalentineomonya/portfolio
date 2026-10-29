@@ -11,8 +11,8 @@ const pad = (n: number) => String(n).padStart(2, "0");
 export const Experience = () => (
   <section className="site-exp" id="experience">
     <header className="site-exp__head">
-      <span className="site-exp__label">Where I&rsquo;ve worked</span>
-      <h2 className="site-exp__headline">Roles, in order.</h2>
+      <span className="site-exp__label">Track record</span>
+      <h2 className="site-exp__headline">Production systems & impact.</h2>
     </header>
 
     <div className="site-exp__rail" data-rail="">
@@ -21,7 +21,7 @@ export const Experience = () => (
           <li className="site-frame" key={`${company}-${role.title}`}>
             <div className="site-frame__top">
               <span className="site-frame__num">{pad(i + 1)}</span>
-              {role.isCurrent && <span className="site-frame__now">Now</span>}
+              {role.isCurrent && <span className="site-frame__now">Active</span>}
             </div>
             <h3 className="site-frame__company">{company}</h3>
             <p className="site-frame__role">
@@ -43,7 +43,7 @@ export const Experience = () => (
 
         <li className="site-frame site-frame--end">
           <Link href="/experience">
-            The full story
+            View track record
             <span aria-hidden="true">→</span>
           </Link>
         </li>

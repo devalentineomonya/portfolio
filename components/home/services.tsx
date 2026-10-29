@@ -3,8 +3,8 @@ import { PhysicsStack } from "@/components/home/physics-stack";
 
 export const Services = () => (
   <section className="site-services" id="services">
-    <span className="site-services__label">What I build</span>
-    <h2 className="site-services__headline">From pixels to production.</h2>
+    <span className="site-services__label">What I deliver</span>
+    <h2 className="site-services__headline">Websites that sell. Systems that run.</h2>
 
     <div className="site-services__body">
       {/* Empty on purpose: the run path draws through this space. */}

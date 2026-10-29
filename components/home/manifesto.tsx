@@ -5,11 +5,11 @@ import { ManifestoMotion } from "@/components/home/manifesto-motion";
 const HEADLINE = "I build the whole product, from screen to server.";
 
 const TAGS = [
-  { label: "Ship it", tone: "tangerine", shape: "round", left: "5%", top: "10%", rot: -8 },
-  { label: "Make it work", tone: "ink", shape: "block", left: "1%", top: "42%", rot: -3 },
-  { label: "Stay curious", tone: "chalk", shape: "tab", left: "13%", top: "70%", rot: 5 },
-  { label: "Read the docs", tone: "forest", shape: "block", left: "76%", top: "6%", rot: 6 },
-  { label: "Build better", tone: "lilac", shape: "round", left: "80%", top: "50%", rot: -5 },
+  { label: "E-Commerce", tone: "tangerine", shape: "round", left: "5%", top: "10%", rot: -8 },
+  { label: "Next.js + NestJS", tone: "ink", shape: "block", left: "1%", top: "42%", rot: -3 },
+  { label: "POS & ERP", tone: "chalk", shape: "tab", left: "13%", top: "70%", rot: 5 },
+  { label: "Payment APIs", tone: "forest", shape: "block", left: "76%", top: "6%", rot: 6 },
+  { label: "Conversions", tone: "lilac", shape: "round", left: "80%", top: "50%", rot: -5 },
   { label: "Nairobi", tone: "mint", shape: "tab", left: "70%", top: "84%", rot: 3 },
 ] as const;
 

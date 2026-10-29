@@ -1,30 +1,14 @@
-import { MetadataRoute } from "next";
+import type { MetadataRoute } from "next";
+import { SITE } from "@/config/site";
+
+/**
+ * Static pages that make up Valentine's portfolio.
+ */
+const STATIC_PATHS = ["", "/work", "/experience", "/stories"];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  return [
-    {
-      url: "https://devalentine.com",
-      lastModified: new Date(),
-      changeFrequency: "yearly",
-      priority: 1,
-    },
-    {
-      url: "https://devalentine.com/work",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.9,
-    },
-    {
-      url: "https://devalentine.com/experience",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.9,
-    },
-    {
-      url: "https://devalentine.com/stories",
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 0.8,
-    },
-  ];
+  return STATIC_PATHS.map((path) => ({
+    url: `${SITE.url}${path}`,
+    lastModified: new Date(),
+  }));
 }

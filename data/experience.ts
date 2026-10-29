@@ -15,16 +15,31 @@ export interface Experience {
 
 export const experiences: Experience[] = [
   {
+    company: "Freelance & Client Systems",
+    location: "Nairobi, Kenya / Remote",
+    roles: [
+      {
+        title: "Freelance Full-Stack Engineer",
+        type: "Direct Client Work",
+        dateRange: "2024 - Present",
+        isCurrent: true,
+        description:
+          "Partnering with businesses to build high-converting Next.js websites and custom NestJS business software (POS, ERP, CRM). Engineered for maximum page speed, Google visibility, M-Pesa payment integration, and converting visitors into paying customers.",
+        technologies: ["next.js", "nestjs", "pos", "erp", "crm", "seo", "m-pesa", "docker"],
+      },
+    ],
+  },
+  {
     company: "Transcom Media",
     location: "Nairobi, Kenya",
     roles: [
       {
-        title: "Software Engineering Attaché",
-        type: "Attachment",
-        dateRange: "May 2026 - Present",
+        title: "Full-Stack Engineer & Consultant",
+        type: "Client Systems",
+        dateRange: "May 2024 - Present",
         isCurrent: true,
         description:
-          "I build custom websites and tools for business clients using PHP, CodeIgniter and WordPress, so their day-to-day work runs more smoothly.",
+          "Architecting custom business websites, automation tools, and content management platforms for corporate clients to streamline operations and enhance digital presence.",
         technologies: ["php", "codeigniter", "wordpress", "mysql", "javascript"],
       },
     ],
@@ -34,49 +49,27 @@ export const experiences: Experience[] = [
     location: "Kenya",
     roles: [
       {
-        title: "Vice Chairperson",
-        type: "Leadership",
-        dateRange: "May 2026 - Present",
+        title: "Lead Platform Architect & Vice Chair",
+        type: "Product & Growth",
+        dateRange: "Sep 2023 - Present",
         isCurrent: true,
         description:
-          "I help run the society day to day: organising workshops, supporting members and planning what we do next, so more students get into tech.",
-        technologies: ["leadership", "teamwork", "community", "mentorship"],
-      },
-      {
-        title: "Development Lead",
-        type: "Core",
-        dateRange: "Sep 2025 - Present",
-        description:
-          "I led both the front-end and back-end teams and built much of the front end myself. We delivered the society's platform with AI features and M-Pesa payments, and active users grew by 40%.",
-        technologies: ["nestjs", "docker", "openai", "stripe", "rabbitmq"],
+          "Led development of the organization's community platform with NestJS and Next.js, integrating automated M-Pesa payments and member dashboards. Active users grew by 40% under my technical direction.",
+        technologies: ["next.js", "nestjs", "m-pesa", "community", "mentorship"],
       },
     ],
   },
   {
-    company: "Teach2Give",
-    location: "On-Site Attachment",
+    company: "Nine Hertz (Clinic Management)",
+    location: "Nairobi, Kenya",
     roles: [
       {
-        title: "Software Engineering Attaché",
-        type: "Attachment",
-        dateRange: "May 2025 - Jul 2025",
+        title: "Full-Stack Product Engineer",
+        type: "Healthcare SaaS",
+        dateRange: "2024",
         description:
-          "I worked on real projects with React and NestJS, learned Docker and Azure DevOps for automated releases, and got better at leading, teamwork and writing things down clearly.",
-        technologies: ["react", "nestjs", "docker", "typescript", "git", "github"],
-      },
-    ],
-  },
-  {
-    company: "Godan Info",
-    location: "Remote Internship",
-    roles: [
-      {
-        title: "Frontend Web Developer",
-        type: "Internship",
-        dateRange: "Jan 2025 - Apr 2025",
-        description:
-          "I built parts of a customer dashboard with React and Ant Design, working with the team on screens that adapt to each user's role and make their daily work easier.",
-        technologies: ["react", "antdesign", "javascript", "ui/ux", "frontend"],
+          "Engineered a comprehensive clinic management and booking platform handling patient medical records, appointment scheduling, SMS reminders, and operational cashflow insights.",
+        technologies: ["react", "nestjs", "docker", "postgresql"],
       },
     ],
   },
