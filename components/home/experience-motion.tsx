@@ -6,7 +6,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-/** The dark panel opens up, then the film strip is pinned and pulled sideways as you scroll. */
+/** The film strip is pinned and pulled sideways as you scroll. */
 export const ExperienceMotion = () => {
   useEffect(() => {
     const section = document.querySelector<HTMLElement>(".site-exp");
@@ -17,17 +17,6 @@ export const ExperienceMotion = () => {
     const mm = gsap.matchMedia();
     mm.add("(min-width: 821px) and (prefers-reduced-motion: no-preference)", () => {
       section.classList.add("is-pinned");
-
-      gsap.fromTo(
-        section,
-        { clipPath: "inset(0% 14% 0% 14% round 44px)" },
-        {
-          clipPath: "inset(0% 0% 0% 0% round 44px)",
-          ease: "none",
-          clearProps: "clipPath",
-          scrollTrigger: { trigger: section, start: "top 95%", end: "top top", scrub: true },
-        },
-      );
 
       // Stop with the last frame a gutter away from the right edge.
       const distance = () => {

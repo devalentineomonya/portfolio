@@ -135,17 +135,6 @@ export const CtaMotion = () => {
         scrollTrigger: { trigger: section, start: "top 55%", once: true },
       });
 
-      gsap.fromTo(
-        section,
-        { clipPath: "inset(0% 14% 0% 14% round 44px)" },
-        {
-          clipPath: "inset(0% 0% 0% 0% round 44px)",
-          ease: "none",
-          clearProps: "clipPath",
-          scrollTrigger: { trigger: section, start: "top 95%", end: "top 30%", scrub: true },
-        },
-      );
-
       if (touch.matches) {
         ScrollTrigger.create({
           trigger: mail,
