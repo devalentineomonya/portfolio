@@ -8,10 +8,10 @@ export const contentType = OG_CONTENT_TYPE;
 export default function Image() {
   return ogImage({
     eyebrow: "Work",
-    title: "E-Commerce, websites & business systems.",
+    title: "Stores, payments & business systems.",
     subtitle:
-      "High-speed online stores, seamless payment integrations (M-Pesa & Stripe), clinic POS platforms, and automated cashflow systems.",
+      "Online stores, business software, clinic platforms and M-Pesa tools, live for real clients.",
     badgeColor: "#8fe3b8",
-    footerRight: "E-Commerce & Systems · Active",
+    footerRight: "Selected work",
   });
 }

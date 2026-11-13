@@ -85,8 +85,7 @@ export const workProjects: WorkProject[] = [
   {
     title: "Tekobliss",
     category: "Client",
-    description:
-      "A fast, modern website for Tekobliss that shows off the brand and turns visitors into clients.",
+    description: "A fast website for Tekobliss that shows what they do and brings in new clients.",
     image: "/work/tekobliss-desktop.webp",
     mobileImage: "/work/tekobliss-mobile.webp",
     url: "https://tekobliss.com/",
@@ -96,7 +95,7 @@ export const workProjects: WorkProject[] = [
     title: "PBQ Simulator",
     category: "Client",
     description:
-      "A practice tool that lets students try hands-on IT exam questions before the real test. I run it on a VPS with Docker Compose, deployed by Kamal through an automated CI/CD pipeline, with monitoring on top.",
+      "A practice tool that lets students try hands-on IT exam questions before the real test. It runs on a VPS with Docker, automatic deploys and monitoring.",
     image: "/work/pbq-simulator-desktop.webp",
     mobileImage: "/work/pbq-simulator-mobile.webp",
     url: "https://pbqsimulator.com/",

@@ -1,43 +1,36 @@
 export const heroContent = {
   brand: "devalentine.",
-  tagline: "Freelance engineer · E-Commerce, Payments, Next.js & NestJS",
   word: "VALENTINE",
-  copy: "I build beautiful, high-converting e-commerce stores, high-speed Next.js websites, and robust NestJS business systems (POS, ERP, CRM) with seamless payment integrations (M-Pesa, Stripe, cards). Optimized for speed, search visibility, and checkout conversion — taking products from raw idea to first paying customer.",
-  examples:
-    "Recent work: online store checkouts, clinic POS systems, automated M-Pesa cashflow tracking, and high-visibility corporate websites.",
-  status: "Taking on new projects · Freelance & contracts worldwide",
+  copy: "I build online stores, M-Pesa and card payments, and the systems behind them: POS, stock and customer records. One engineer, from first plan to first sale.",
   services: [
     {
       short: "E-Commerce",
-      tags: ["Next.js stores", "Technical SEO", "Fast checkout"],
-      title: "E-Commerce & High-Converting Websites",
-      detail:
-        "Fast Next.js storefronts, technical SEO, and sub-second speed that attract traffic, reduce bounce rates, and turn visitors into buyers.",
+      tags: ["Next.js stores", "SEO", "Fast checkout"],
+      title: "Online stores that sell",
+      detail: "Fast stores that show up on Google, load quickly on any phone and make buying easy.",
     },
     {
       short: "Payments",
       tags: ["M-Pesa STK Push", "Stripe", "Cards"],
-      title: "Payment Integrations & Gateways",
+      title: "M-Pesa and card payments",
       detail:
-        "Frictionless checkout experiences with M-Pesa (STK Push, Daraja API), Stripe, card payments, automated receipts, and multi-currency billing.",
+        "Customers pay by M-Pesa or card. Payments confirm instantly, receipts go out on their own, and totals match your books.",
     },
     {
       short: "Business systems",
       tags: ["POS", "ERP", "CRM"],
-      title: "Business Systems (POS, ERP, CRM)",
+      title: "POS, stock and customer systems",
       detail:
-        "NestJS APIs, inventory management, customer records, and operations software that keeps your business running smoothly.",
+        "Sales, stock and customers tracked in one place, so your team stops chasing spreadsheets.",
     },
     {
       short: "Launch",
-      tags: ["Architecture", "Payments", "Deployment"],
-      title: "Idea to First Paying Customer",
+      tags: ["Planning", "Hosting", "Support"],
+      title: "From idea to first sale",
       detail:
-        "End-to-end product delivery: store architecture, payment flows, customer onboarding, and reliable cloud deployment.",
+        "I plan it, build it and put it live, then stay on to fix, support and grow it with you.",
     },
   ],
-  story:
-    "I'm Valentine, a freelance full-stack engineer in Nairobi specializing in Next.js, NestJS, e-commerce, and payment integrations. I partner with founders and businesses to launch online stores and websites that rank high and convert, alongside custom business software (POS, ERP, CRM) and seamless payment gateways (M-Pesa, Stripe, cards) that automate cashflow and operations. No agency overhead — just fast code, reliable payment flows, and direct revenue growth.",
   profile: {
     name: "Valentine Omonya",
     role: "Freelance Full-Stack Engineer",

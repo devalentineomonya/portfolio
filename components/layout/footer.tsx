@@ -4,7 +4,7 @@ import { NairobiClock } from "@/components/home/nairobi-clock";
 
 const { links, profile } = heroContent;
 
-const SIGN_OFF = ["Taking on projects", "Available worldwide", "Let's build"];
+const SIGN_OFF = ["Open for new projects", "Nairobi & remote", "Let's build"];
 
 const PAGES = [
   { label: "Work", href: "/work" },

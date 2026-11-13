@@ -61,9 +61,9 @@ export function breadcrumbSchema(trail: { name: string; path: string }[]) {
 export function projectListSchema(projects: WorkProject[]) {
   return {
     "@type": "ItemList",
-    name: "Featured Client Projects & Software Systems",
+    name: "Selected projects",
     description:
-      "High-converting e-commerce stores, Next.js websites, payment integrations and business systems engineered by Valentine Omonya.",
+      "Online stores, websites, payment integrations and business systems built by Valentine Omonya.",
     itemListElement: projects.map((project, i) => ({
       "@type": "SoftwareApplication",
       position: i + 1,
@@ -81,8 +81,7 @@ export function storiesListSchema(items: Story[]) {
   return {
     "@type": "ItemList",
     name: "Stories and Articles",
-    description:
-      "Articles on e-commerce, web performance, payment gateways, NestJS backends, and building software that converts.",
+    description: "Notes on Next.js, React, TypeScript and building software people use.",
     itemListElement: items.map((story, i) => ({
       "@type": "BlogPosting",
       position: i + 1,

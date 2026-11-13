@@ -12,7 +12,7 @@ export const Experience = () => (
   <section className="site-exp" id="experience">
     <header className="site-exp__head">
       <span className="site-exp__label">Track record</span>
-      <h2 className="site-exp__headline">Production systems & impact.</h2>
+      <h2 className="site-exp__headline">Real clients. Live systems.</h2>
     </header>
 
     <div className="site-exp__rail" data-rail="">
@@ -43,7 +43,7 @@ export const Experience = () => (
 
         <li className="site-frame site-frame--end">
           <Link href="/experience">
-            View track record
+            See the full record
             <span aria-hidden="true">→</span>
           </Link>
         </li>

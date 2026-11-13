@@ -6,12 +6,12 @@ import { breadcrumbSchema } from "@/lib/schema";
 export const metadata: Metadata = {
   title: "Track Record",
   description:
-    "Delivered systems, client software, and production applications engineered by Valentine Omonya.",
+    "Where Valentine Omonya has built software: freelance client systems, Transcom Media, a university tech society and a clinic platform.",
   alternates: { canonical: "/experience" },
   openGraph: {
     title: "Track Record | Valentine Omonya",
     description:
-      "Delivered systems, client software, and production applications engineered by Valentine Omonya.",
+      "Where Valentine Omonya has built software: freelance client systems, Transcom Media, a university tech society and a clinic platform.",
     url: "/experience",
   },
 };

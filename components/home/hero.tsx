@@ -36,7 +36,7 @@ export const Hero = () => (
         <p className="site-copy">{heroContent.copy}</p>
         <div className="site-actions">
           <a className="site-btn site-btn--solid" href="/work">
-            See client work
+            See my work
             <ArrowUpRightIcon className="site-btn__icon" strokeWidth={2} />
           </a>
           <a className="site-btn" href={heroContent.links.email}>
@@ -47,8 +47,7 @@ export const Hero = () => (
 
       <div className="site-panel" data-hero="panel">
         <p className="site-panel__title" data-hero="fade">
-          Taking on new projects · E-commerce, websites, payment integrations &amp; business
-          systems.
+          Open for new projects · Online stores, payments and business systems.
         </p>
 
         <div className="site-panel__brace" data-hero-brace="">

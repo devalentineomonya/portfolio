@@ -24,7 +24,7 @@ export const experiences: Experience[] = [
         dateRange: "2024 - Present",
         isCurrent: true,
         description:
-          "Partnering with businesses to build high-converting Next.js websites and custom NestJS business software (POS, ERP, CRM). Engineered for maximum page speed, Google visibility, M-Pesa payment integration, and converting visitors into paying customers.",
+          "I build websites, online stores and business software (POS, ERP, CRM) for businesses, with M-Pesa payments built in. I handle the whole job: plan, build, launch and support.",
         technologies: ["next.js", "nestjs", "pos", "erp", "crm", "seo", "m-pesa", "docker"],
       },
     ],
@@ -39,7 +39,7 @@ export const experiences: Experience[] = [
         dateRange: "May 2024 - Present",
         isCurrent: true,
         description:
-          "Architecting custom business websites, automation tools, and content management platforms for corporate clients to streamline operations and enhance digital presence.",
+          "I build business websites, automation tools and content systems for corporate clients, so their teams spend less time on manual work.",
         technologies: ["php", "codeigniter", "wordpress", "mysql", "javascript"],
       },
     ],
@@ -54,7 +54,7 @@ export const experiences: Experience[] = [
         dateRange: "Sep 2023 - Present",
         isCurrent: true,
         description:
-          "Led development of the organization's community platform with NestJS and Next.js, integrating automated M-Pesa payments and member dashboards. Active users grew by 40% under my technical direction.",
+          "I lead the build of the society's community platform on Next.js and NestJS, with M-Pesa payments and member dashboards. Active users grew by 40% under my lead.",
         technologies: ["next.js", "nestjs", "m-pesa", "community", "mentorship"],
       },
     ],
@@ -68,7 +68,7 @@ export const experiences: Experience[] = [
         type: "Healthcare SaaS",
         dateRange: "2024",
         description:
-          "Engineered a comprehensive clinic management and booking platform handling patient medical records, appointment scheduling, SMS reminders, and operational cashflow insights.",
+          "Built a clinic platform for bookings, patient records, SMS reminders and cashflow reports, all in one place.",
         technologies: ["react", "nestjs", "docker", "postgresql"],
       },
     ],

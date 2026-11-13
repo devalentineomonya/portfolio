@@ -1,16 +1,16 @@
 import { OG_CONTENT_TYPE, OG_SIZE, ogImage } from "@/lib/og";
 
-export const alt = "Track record and delivered systems by Valentine Omonya";
+export const alt = "Track record of Valentine Omonya: clients, roles and live systems";
 export const size = OG_SIZE;
 export const contentType = OG_CONTENT_TYPE;
 
 export default function Image() {
   return ogImage({
     eyebrow: "Track Record",
-    title: "Proven systems & business impact.",
+    title: "Real clients. Live systems.",
     subtitle:
-      "Production Next.js platforms, NestJS backends, M-Pesa billing, and operations software delivered for real businesses.",
+      "Websites, M-Pesa payments and operations software built for businesses, a clinic and a tech society.",
     badgeColor: "#c9b6ff",
-    footerRight: "Track Record · Taking on projects",
+    footerRight: "Track record · Open for projects",
   });
 }

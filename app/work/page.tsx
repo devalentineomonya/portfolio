@@ -7,12 +7,12 @@ import { breadcrumbSchema, projectListSchema } from "@/lib/schema";
 export const metadata: Metadata = {
   title: "Work",
   description:
-    "Websites and business systems built by Valentine Omonya for businesses, clinics, and startups.",
+    "Online stores, websites and business systems built by Valentine Omonya for shops, clinics, schools and startups.",
   alternates: { canonical: "/work" },
   openGraph: {
     title: "Work | Valentine Omonya",
     description:
-      "Websites and business systems built by Valentine Omonya for businesses, clinics, and startups.",
+      "Online stores, websites and business systems built by Valentine Omonya for shops, clinics, schools and startups.",
     url: "/work",
   },
 };

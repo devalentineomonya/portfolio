@@ -77,10 +77,9 @@ export const ExperienceTimeline = () => {
     <section className="site-tl" ref={root}>
       <header className="site-tl__head" data-head="">
         <span className="site-tl__label">Track Record</span>
-        <h1 className="site-tl__headline">Proven systems & delivery.</h1>
+        <h1 className="site-tl__headline">Real clients. Live systems.</h1>
         <p className="site-tl__lede">
-          Real clients, real businesses, and mission-critical software shipped to production.
-          Engineered for speed, visibility, and measurable revenue.
+          Who I&rsquo;ve built for, what I built, and what it changed for them.
         </p>
         <a className="site-tl__resume" href={heroContent.links.email}>
           Start a project <span aria-hidden="true">→</span>

@@ -9,11 +9,11 @@ const PILLS = [
   { label: "Next.js", tone: "chalk", shape: "block" },
   { label: "NestJS", tone: "mint", shape: "tab" },
   { label: "E-Commerce", tone: "butter", shape: "round" },
-  { label: "Payment APIs", tone: "tangerine", shape: "round" },
+  { label: "Inventory", tone: "tangerine", shape: "round" },
   { label: "POS & ERP", tone: "lilac", shape: "tab" },
   { label: "M-Pesa & Stripe", tone: "mint", shape: "block" },
-  { label: "Speed & SEO", tone: "butter", shape: "block" },
-  { label: "Conversions", tone: "lilac", shape: "round" },
+  { label: "Fast & on Google", tone: "butter", shape: "block" },
+  { label: "More sales", tone: "lilac", shape: "round" },
 ] as const;
 
 /** Brace is plain SVG, so give the physics a hidden block where its head is. */

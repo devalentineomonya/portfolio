@@ -8,14 +8,14 @@ const HUB = { x: 900, y: 18 };
 const branches = [
   {
     num: "01",
-    title: "Blueprint",
+    title: "Plan",
     tone: "lilac",
     x: 240,
     y: 450,
     leaves: [
-      { text: "Understand your business", dx: -130, y: 720 },
-      { text: "Next.js & NestJS stack", dx: 130, y: 720 },
-      { text: "High-converting store UX", dx: 0, y: 860 },
+      { text: "Learn your business", dx: -130, y: 720 },
+      { text: "Agree what to build", dx: 130, y: 720 },
+      { text: "Design the screens", dx: 0, y: 860 },
     ],
   },
   {
@@ -25,9 +25,9 @@ const branches = [
     x: 720,
     y: 520,
     leaves: [
-      { text: "Fast checkout & SEO", dx: -130, y: 740 },
-      { text: "POS, ERP & APIs", dx: 130, y: 740 },
-      { text: "M-Pesa & Stripe gateways", dx: 0, y: 870 },
+      { text: "Store & checkout", dx: -130, y: 740 },
+      { text: "POS, stock & CRM", dx: 130, y: 740 },
+      { text: "M-Pesa & card payments", dx: 0, y: 870 },
     ],
   },
   {
@@ -37,9 +37,9 @@ const branches = [
     x: 1200,
     y: 450,
     leaves: [
-      { text: "Docker & Cloud deploy", dx: -130, y: 720 },
+      { text: "Go live & monitor", dx: -130, y: 720 },
       { text: "First paying customer", dx: 130, y: 720 },
-      { text: "Ongoing scale & support", dx: 0, y: 860 },
+      { text: "Support as you grow", dx: 0, y: 860 },
     ],
   },
 ] as const;
@@ -59,8 +59,8 @@ export const Process = () => (
   <section className="site-process" id="process">
     <div className="site-process__map" data-map="">
       <div className="site-process__head">
-        <span className="site-process__label">How we work</span>
-        <h2 className="site-process__headline">From raw idea to paying customers.</h2>
+        <span className="site-process__label">How it works</span>
+        <h2 className="site-process__headline">From first call to first sale.</h2>
       </div>
 
       <svg className="site-process__svg" viewBox={`0 0 ${W} ${H}`} aria-hidden="true">
@@ -87,7 +87,7 @@ export const Process = () => (
 
       <div className="site-process__pos" style={at(HUB.x, HUB.y)}>
         <span className="site-process__hub" data-hub="">
-          Your product
+          Your business
         </span>
       </div>
 
