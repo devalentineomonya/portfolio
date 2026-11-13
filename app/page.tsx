@@ -1,6 +1,6 @@
 import { Intro } from "@/components/home/intro";
 import { Hero } from "@/components/home/hero";
-import { Manifesto } from "@/components/home/manifesto";
+import { System } from "@/components/home/system";
 import { Services } from "@/components/home/services";
 import { Work } from "@/components/home/work";
 import { Trail } from "@/components/home/trail";
@@ -13,13 +13,13 @@ export default function Home() {
   return (
     <>
       <noscript>
-        <style>{`.site-loader{display:none}`}</style>
+        <style>{`.site-loader,.site-system__note,.site-system__cable{display:none}.site-system__hub,.site-system__brace,.site-system__label,.site-system__copy{opacity:1;transform:none}.site-system__word{transform:none}`}</style>
       </noscript>
       <Intro />
       <main>
         <div className="site-cover">
           <Hero />
-          <Manifesto />
+          <System />
         </div>
         <div className="site-run">
           <RunPath />

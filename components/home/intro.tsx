@@ -166,7 +166,7 @@ export const Intro = () => {
           yPercent: -12,
           ease: "none",
           scrollTrigger: {
-            trigger: ".site-manifesto",
+            trigger: ".site-system",
             start: "top bottom",
             end: "top top",
             scrub: true,

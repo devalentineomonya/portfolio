@@ -8,21 +8,29 @@ export const heroContent = {
   status: "Taking on new projects · Freelance & contracts worldwide",
   services: [
     {
+      short: "E-Commerce",
+      tags: ["Next.js stores", "Technical SEO", "Fast checkout"],
       title: "E-Commerce & High-Converting Websites",
       detail:
         "Fast Next.js storefronts, technical SEO, and sub-second speed that attract traffic, reduce bounce rates, and turn visitors into buyers.",
     },
     {
+      short: "Payments",
+      tags: ["M-Pesa STK Push", "Stripe", "Cards"],
       title: "Payment Integrations & Gateways",
       detail:
         "Frictionless checkout experiences with M-Pesa (STK Push, Daraja API), Stripe, card payments, automated receipts, and multi-currency billing.",
     },
     {
+      short: "Business systems",
+      tags: ["POS", "ERP", "CRM"],
       title: "Business Systems (POS, ERP, CRM)",
       detail:
         "NestJS APIs, inventory management, customer records, and operations software that keeps your business running smoothly.",
     },
     {
+      short: "Launch",
+      tags: ["Architecture", "Payments", "Deployment"],
       title: "Idea to First Paying Customer",
       detail:
         "End-to-end product delivery: store architecture, payment flows, customer onboarding, and reliable cloud deployment.",
