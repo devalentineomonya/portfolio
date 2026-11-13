@@ -18,6 +18,18 @@ export interface WorkProject {
 
 export const workProjects: WorkProject[] = [
   {
+    title: "Soko",
+    category: "Product",
+    description:
+      "Business software for Kenyan shops. A till with M-Pesa and receipts, stock that stays right across every branch, and extra modules (ERP, online store, HR) you switch on only when you need them.",
+    image: "/work/soko-desktop.webp",
+    mobileImage: "/work/soko-mobile.webp",
+    url: "https://pos.devaltech.co.ke",
+    technologies: ["next.js", "nestjs", "drizzle", "m-pesa"],
+    year: "2026",
+    featured: true,
+  },
+  {
     title: "Nine Hertz",
     category: "Personal",
     description:
