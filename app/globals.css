@@ -2567,10 +2567,36 @@ html:has(.site)::-webkit-scrollbar {
     top: var(--my);
   }
 
+  /* Phones stack the heading over the board, so the mess plays out below words already on screen. */
+  .site-system__pin {
+    display: flex;
+    flex-direction: column;
+    padding: clamp(24px, 5svh, 48px) 0 96px;
+  }
+
   .site-system__head {
-    right: var(--pad);
-    bottom: auto;
+    position: static;
     width: auto;
+    margin: 0 var(--pad);
+  }
+
+  /* !important beats the inline styles the scroll timeline writes; the heading never hides here. */
+  .site-system__label,
+  .site-system__copy {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .site-system__word {
+    transform: none !important;
+  }
+
+  .site-system__board {
+    position: relative;
+    inset: auto;
+    flex: 1;
+    min-height: 0;
+    margin-top: 16px;
   }
 
   .site-system__label {

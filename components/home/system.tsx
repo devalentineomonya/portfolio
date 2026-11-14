@@ -56,93 +56,93 @@ const APPS = [
     tone: "#ff6a2b",
     badge: 4,
     r: 6,
-    from: { x: 6, y: 40, mx: 9, my: 36 },
-    to: { x: 28, y: 44, mx: 20, my: 50 },
+    from: { x: 6, y: 40, mx: 10, my: 30 },
+    to: { x: 28, y: 44, mx: 13, my: 40 },
   },
   {
     icon: "bell",
     tone: "#c7e86b",
     badge: 9,
     r: -10,
-    from: { x: 32, y: 84, mx: 22, my: 86 },
-    to: { x: 46, y: 20, mx: 38, my: 42 },
+    from: { x: 32, y: 84, mx: 24, my: 90 },
+    to: { x: 46, y: 20, mx: 30, my: 13 },
   },
   {
     icon: "chat",
     tone: "#8fe3b8",
     badge: 2,
     r: -8,
-    from: { x: 10, y: 18, mx: 13, my: 14 },
-    to: { x: 70, y: 22, mx: 67, my: 43 },
+    from: { x: 10, y: 18, mx: 12, my: 8 },
+    to: { x: 70, y: 22, mx: 70, my: 13 },
   },
   {
     icon: "sheet",
     tone: "#c7e86b",
     badge: 0,
     r: 4,
-    from: { x: 53, y: 24, mx: 76, my: 11 },
-    to: { x: 85, y: 42, mx: 84, my: 55 },
+    from: { x: 53, y: 24, mx: 80, my: 7 },
+    to: { x: 85, y: 42, mx: 87, my: 40 },
   },
   {
     icon: "mail",
     tone: "#ffc21a",
     badge: 12,
     r: 8,
-    from: { x: 69, y: 88, mx: 66, my: 84 },
-    to: { x: 83, y: 70, mx: 82, my: 68 },
+    from: { x: 69, y: 88, mx: 62, my: 90 },
+    to: { x: 83, y: 70, mx: 87, my: 70 },
   },
   {
     icon: "calendar",
     tone: "#c9b6ff",
     badge: 0,
     r: -6,
-    from: { x: 95, y: 88, mx: 88, my: 80 },
-    to: { x: 67, y: 86, mx: 62, my: 78 },
+    from: { x: 95, y: 88, mx: 90, my: 84 },
+    to: { x: 67, y: 86, mx: 67, my: 91 },
   },
   {
     icon: "chart",
     tone: "#ffb4a2",
     badge: 0,
     r: -5,
-    from: { x: 30, y: 38, mx: 40, my: 30 },
-    to: { x: 42, y: 86, mx: 35, my: 77 },
+    from: { x: 30, y: 38, mx: 42, my: 30 },
+    to: { x: 42, y: 86, mx: 33, my: 91 },
   },
   {
     icon: "cloud",
     tone: "#f2efe6",
     badge: 0,
     r: 10,
-    from: { x: 97, y: 72, mx: 88, my: 46 },
-    to: { x: 24, y: 70, mx: 16, my: 65 },
+    from: { x: 97, y: 72, mx: 90, my: 46 },
+    to: { x: 24, y: 70, mx: 13, my: 70 },
   },
 ] as const;
 
 const NOTES = [
-  { text: "Which CRM??", tone: "#ffcf33", r: -3, at: { x: 17, y: 57, mx: 20, my: 58 } },
+  { text: "Which CRM??", tone: "#ffcf33", r: -3, at: { x: 17, y: 57, mx: 22, my: 58 } },
   {
     text: "Password is on the fridge",
     tone: "#ffcf33",
     r: 3,
-    at: { x: 40, y: 79, mx: 46, my: 76 },
+    at: { x: 40, y: 79, mx: 44, my: 74 },
   },
   {
     text: "M-Pesa total doesn't match",
     tone: "#ffcf33",
     r: 7,
-    at: { x: 64, y: 42, mx: 60, my: 44 },
+    at: { x: 64, y: 42, mx: 66, my: 38 },
   },
-  { text: "Export to Excel. Again.", tone: "#ff9f7a", r: 9, at: { x: 80, y: 27, mx: 48, my: 15 } },
+  { text: "Export to Excel. Again.", tone: "#ff9f7a", r: 9, at: { x: 80, y: 27, mx: 46, my: 13 } },
   { text: "Who owns this?", tone: "#c7e86b", r: -4, at: { x: 91, y: 38, mx: 82, my: 64 } },
 ] as const;
 
 const CABLES = [
-  { tone: "#f2efe6", r: 8, at: { x: 34, y: 17, mx: 30, my: 48 } },
-  { tone: "#8fe3b8", r: 22, at: { x: 93, y: 52, mx: 86, my: 30 } },
-  { tone: "#ff6a2b", r: -12, at: { x: 11, y: 84, mx: 14, my: 72 } },
+  { tone: "#f2efe6", r: 8, at: { x: 34, y: 17, mx: 30, my: 44 } },
+  { tone: "#8fe3b8", r: 22, at: { x: 93, y: 52, mx: 74, my: 22 } },
+  { tone: "#ff6a2b", r: -12, at: { x: 11, y: 84, mx: 16, my: 80 } },
 ] as const;
 
-const HUB: Spot = { x: 56, y: 56, mx: 50, my: 60 };
-const BRACE: Spot = { x: 48.5, y: 72, mx: 42, my: 71 };
+const HUB: Spot = { x: 56, y: 56, mx: 50, my: 50 };
+const BRACE: Spot = { x: 48.5, y: 72, mx: 50, my: 84 };
 
 /** Second section: a mess of apps, sticky notes and loose cables gets put in order around the business. */
 export const System = () => (
