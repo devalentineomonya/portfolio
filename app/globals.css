@@ -2642,7 +2642,7 @@ html:has(.site)::-webkit-scrollbar {
   }
 
   .site-slide__detail {
-    font-size: 12px;
+    font-size: 13px;
   }
 
   .site-slide__tags li {
